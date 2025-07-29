@@ -24,7 +24,7 @@ export function Header({ currentPage, onPageChange }: HeaderProps) {
             className="flex items-center space-x-2 hover:opacity-80 transition-all duration-300 group"
           >
             <div className="w-8 h-8 intellectual-gradient rounded-full flex items-center justify-center shadow-intellectual group-hover:shadow-lg transition-all duration-300">
-              <span className="text-primary-foreground font-medium">YN</span>
+              <span className="text-white font-medium">YN</span>
             </div>
             <span className="font-medium text-primary">Yamada Nao</span>
           </button>
