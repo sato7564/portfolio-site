@@ -40,7 +40,7 @@ export function Header({ currentPage, onPageChange }: HeaderProps) {
                   onClick={() => onPageChange(item.id)}
                   onMouseEnter={() => setHoveredItem(item.id)}
                   onMouseLeave={() => setHoveredItem(null)}
-                  className={`relative pb-2 px-2 transition-all duration-300 ${
+                  className={`relative pb-2 px-2 transition-all duration-300 min-w-[120px] ${
                     isActive
                       ? 'text-primary font-medium'
                       : 'text-muted-foreground hover:text-primary'
@@ -56,27 +56,30 @@ export function Header({ currentPage, onPageChange }: HeaderProps) {
                     isHovered ? 'opacity-100' : 'opacity-0'
                   }`} />
                   
-                  {/* アクティブな場合は常に日本語、非アクティブでホバー時のみ切り替え */}
-                  {isActive ? (
-                    <span className="relative z-10">{item.japanese}</span>
-                  ) : (
-                    <>
-                      <span 
-                        className={`relative z-10 block transition-opacity duration-300 ${
-                          isHovered ? 'opacity-0' : 'opacity-100'
-                        }`}
-                      >
-                        {item.english}
-                      </span>
-                      <span 
-                        className={`absolute inset-0 z-10 flex items-center justify-center transition-opacity duration-300 ${
-                          isHovered ? 'opacity-100' : 'opacity-0'
-                        }`}
-                      >
-                        {item.japanese}
-                      </span>
-                    </>
-                  )}
+                  {/* テキストコンテナ */}
+                  <div className="relative z-10 h-6 flex items-center justify-center">
+                    {/* アクティブな場合は常に日本語、非アクティブでホバー時のみ切り替え */}
+                    {isActive ? (
+                      <span className="whitespace-nowrap">{item.japanese}</span>
+                    ) : (
+                      <>
+                        <span 
+                          className={`absolute inset-0 flex items-center justify-center transition-opacity duration-300 whitespace-nowrap ${
+                            isHovered ? 'opacity-0' : 'opacity-100'
+                          }`}
+                        >
+                          {item.english}
+                        </span>
+                        <span 
+                          className={`absolute inset-0 flex items-center justify-center transition-opacity duration-300 whitespace-nowrap ${
+                            isHovered ? 'opacity-100' : 'opacity-0'
+                          }`}
+                        >
+                          {item.japanese}
+                        </span>
+                      </>
+                    )}
+                  </div>
                 </button>
               );
             })}
@@ -95,7 +98,7 @@ export function Header({ currentPage, onPageChange }: HeaderProps) {
                     onClick={() => onPageChange(item.id)}
                     onMouseEnter={() => setHoveredItem(item.id)}
                     onMouseLeave={() => setHoveredItem(null)}
-                    className={`relative pb-1 px-1 text-xs transition-all duration-300 ${
+                    className={`relative pb-1 px-1 text-xs transition-all duration-300 min-w-[80px] ${
                       isActive
                         ? 'text-primary font-medium'
                         : 'text-muted-foreground hover:text-primary'
@@ -106,27 +109,30 @@ export function Header({ currentPage, onPageChange }: HeaderProps) {
                       <div className="absolute bottom-0 left-0 right-0 h-0.5 intellectual-gradient rounded-full" />
                     )}
                     
-                    {/* アクティブな場合は常に日本語、非アクティブでホバー時のみ切り替え */}
-                    {isActive ? (
-                      <span className="whitespace-nowrap">{item.japanese}</span>
-                    ) : (
-                      <>
-                        <span 
-                          className={`block transition-opacity duration-300 ${
-                            isHovered ? 'opacity-0' : 'opacity-100'
-                          }`}
-                        >
-                          {item.english}
-                        </span>
-                        <span 
-                          className={`absolute inset-0 flex items-center justify-center transition-opacity duration-300 whitespace-nowrap ${
-                            isHovered ? 'opacity-100' : 'opacity-0'
-                          }`}
-                        >
-                          {item.japanese}
-                        </span>
-                      </>
-                    )}
+                    {/* テキストコンテナ */}
+                    <div className="relative h-5 flex items-center justify-center">
+                      {/* アクティブな場合は常に日本語、非アクティブでホバー時のみ切り替え */}
+                      {isActive ? (
+                        <span className="whitespace-nowrap">{item.japanese}</span>
+                      ) : (
+                        <>
+                          <span 
+                            className={`absolute inset-0 flex items-center justify-center transition-opacity duration-300 whitespace-nowrap ${
+                              isHovered ? 'opacity-0' : 'opacity-100'
+                            }`}
+                          >
+                            {item.english}
+                          </span>
+                          <span 
+                            className={`absolute inset-0 flex items-center justify-center transition-opacity duration-300 whitespace-nowrap ${
+                              isHovered ? 'opacity-100' : 'opacity-0'
+                            }`}
+                          >
+                            {item.japanese}
+                          </span>
+                        </>
+                      )}
+                    </div>
                   </button>
                 );
               })}
