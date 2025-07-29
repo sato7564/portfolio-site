@@ -8,7 +8,14 @@
       "Bash(git init:*)",
       "Bash(git add:*)",
       "Bash(rm:*)",
-      "Bash(taskkill:*)"
+      "Bash(taskkill:*)",
+      "Bash(git commit:*)",
+      "Bash(gh repo create:*)",
+      "Bash(npx playwright:*)",
+      "Bash(node:*)",
+      "Bash(curl:*)",
+      "Bash(move test-site.js debugtest-site.js)",
+      "Bash(mv:*)"
     ],
     "deny": []
   }
