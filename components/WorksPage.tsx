@@ -1,34 +1,70 @@
+import { useState } from "react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "./ui/card";
 import { Button } from "./ui/button";
 import { Badge } from "./ui/badge";
 import { ExternalLink, Github, Calendar, Users, Award } from "lucide-react";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
+import { ProjectModal } from "./ProjectModal";
 
 export function WorksPage() {
+  const [selectedProject, setSelectedProject] = useState<any>(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
   const projects = [
     {
       title: "Eコマースダッシュボード",
       description: "React、TypeScript、Supabaseを使用した現代的なEコマース管理システム。売上分析、在庫管理、顧客管理機能を含む包括的なダッシュボード。リアルタイムでの在庫更新や売上レポートの自動生成機能により、効率的な店舗運営をサポートします。",
+      longDescription: "このEコマースダッシュボードは、中小規模のオンラインストアオーナー向けに開発された包括的な管理システムです。React 18とTypeScriptを使用し、型安全性と保守性を確保しています。バックエンドにはSupabaseを採用し、リアルタイムデータベース機能により在庫の即時更新を実現。Chart.jsを活用した視覚的な売上分析機能では、日別・月別・商品カテゴリ別の売上推移を直感的に把握できます。",
       image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop",
+      images: [
+        "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop",
+        "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop",
+        "https://images.unsplash.com/photo-1556761175-4b46a572b786?w=800&h=600&fit=crop"
+      ],
+      videoUrl: "https://www.youtube.com/watch?v=j1Lc_eov5Po",
+      videoThumbnail: "https://img.youtube.com/vi/j1Lc_eov5Po/maxresdefault.jpg",
       tags: ["React", "TypeScript", "Supabase", "Tailwind CSS", "Chart.js"],
       liveUrl: "https://example.com",
       githubUrl: "https://github.com",
       category: "ダッシュボード",
       year: "2024",
       team: "3人",
-      featured: true
+      featured: true,
+      features: [
+        "リアルタイムの在庫管理と自動アラート機能",
+        "AIを活用した売上予測と推奨仕入れ提案",
+        "顧客の購買履歴分析とパーソナライズドマーケティング",
+        "多言語対応（日本語・英語・中国語）",
+        "モバイルレスポンシブデザイン"
+      ],
+      techDetails: "フロントエンドはReact 18のConcurrent Featuresを活用し、大量データの表示でもスムーズなUXを実現。状態管理にはZustandを採用し、シンプルかつ効率的なデータフローを構築。バックエンドのSupabaseではRow Level Securityを実装し、セキュアなデータアクセスを保証しています。"
     },
     {
       title: "タスク管理アプリ",
       description: "チーム向けの直感的なタスク管理アプリケーション。ドラッグ&ドロップ機能、リアルタイム同期、プロジェクト管理機能を搭載。チームメンバー間でのタスクの進捗状況を可視化し、効率的なプロジェクト管理を実現します。",
+      longDescription: "リモートワークが普及する中、チームの生産性向上を目的として開発されたタスク管理アプリケーションです。Next.js 14のApp Routerを採用し、高速なページ遷移とSEO最適化を実現。Socket.IOによるWebSocket通信で、チームメンバーのアクションがリアルタイムで同期されます。",
       image: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=600&h=400&fit=crop",
+      images: [
+        "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=800&h=600&fit=crop",
+        "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=800&h=600&fit=crop",
+        "https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?w=800&h=600&fit=crop"
+      ],
+      videoUrl: "https://www.youtube.com/watch?v=j1Lc_eov5Po",
+      videoThumbnail: "https://img.youtube.com/vi/j1Lc_eov5Po/maxresdefault.jpg",
       tags: ["Next.js", "Prisma", "PostgreSQL", "Framer Motion", "Socket.IO"],
       liveUrl: "https://example.com",
       githubUrl: "https://github.com",
       category: "生産性ツール",
       year: "2024",
       team: "2人",
-      featured: true
+      featured: true,
+      features: [
+        "カンバンボード式のタスク管理",
+        "ガントチャートによるプロジェクト全体の可視化",
+        "Slackとの連携による通知機能",
+        "タイムトラッキング機能",
+        "レポート自動生成機能"
+      ],
+      techDetails: "Prismaを使用したタイプセーフなデータベースアクセス、Framer Motionによる滑らかなアニメーション、そしてOptimistic UIパターンの採用により、レスポンシブで快適なユーザー体験を提供しています。"
     },
     {
       title: "ポートフォリオサイト",
@@ -83,6 +119,16 @@ export function WorksPage() {
   const featuredProjects = projects.filter(project => project.featured);
   const otherProjects = projects.filter(project => !project.featured);
 
+  const handleProjectClick = (project: any) => {
+    setSelectedProject(project);
+    setIsModalOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
+    setSelectedProject(null);
+  };
+
   return (
     <div className="container mx-auto px-4 py-20">
       <div className="text-center mb-16">
@@ -104,7 +150,11 @@ export function WorksPage() {
         <h2 className="text-2xl font-medium mb-8 text-primary">主要プロジェクト</h2>
         <div className="grid lg:grid-cols-2 gap-8">
           {featuredProjects.map((project, index) => (
-            <Card key={index} className="overflow-hidden group hover:shadow-intellectual transition-all duration-500 border-intellectual">
+            <Card 
+              key={index} 
+              className="overflow-hidden group hover:shadow-intellectual transition-all duration-500 border-intellectual cursor-pointer"
+              onClick={() => handleProjectClick(project)}
+            >
               <div className="aspect-video overflow-hidden relative">
                 <ImageWithFallback
                   src={project.image}
@@ -171,7 +221,10 @@ export function WorksPage() {
         <h2 className="text-2xl font-medium mb-8 text-primary">その他のプロジェクト</h2>
         <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-6">
           {otherProjects.map((project, index) => (
-            <Card key={index} className="overflow-hidden group hover:shadow-intellectual transition-all duration-300 border-intellectual">
+            <Card 
+              key={index} 
+              className="overflow-hidden group hover:shadow-intellectual transition-all duration-300 border-intellectual cursor-pointer"
+              onClick={() => handleProjectClick(project)}>
               <div className="aspect-video overflow-hidden">
                 <ImageWithFallback
                   src={project.image}
@@ -231,6 +284,13 @@ export function WorksPage() {
           ))}
         </div>
       </div>
+
+      {/* プロジェクト詳細モーダル */}
+      <ProjectModal 
+        project={selectedProject}
+        isOpen={isModalOpen}
+        onClose={handleCloseModal}
+      />
     </div>
   );
 }
