@@ -114,18 +114,18 @@ export function ProjectModal({ project, isOpen, onClose }: ProjectModalProps) {
                 <Button
                   size="icon"
                   variant="ghost"
-                  className="absolute left-2 top-1/2 -translate-y-1/2 bg-background/80 hover:bg-background/90"
+                  className="absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white/90 hover:bg-white shadow-md hover:shadow-lg transition-all"
                   onClick={handlePrevious}
                 >
-                  <ChevronLeft className="h-4 w-4" />
+                  <ChevronLeft className="h-5 w-5 text-primary" />
                 </Button>
                 <Button
                   size="icon"
                   variant="ghost"
-                  className="absolute right-2 top-1/2 -translate-y-1/2 bg-background/80 hover:bg-background/90"
+                  className="absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white/90 hover:bg-white shadow-md hover:shadow-lg transition-all"
                   onClick={handleNext}
                 >
-                  <ChevronRight className="h-4 w-4" />
+                  <ChevronRight className="h-5 w-5 text-primary" />
                 </Button>
                 
                 {/* インジケーター */}
