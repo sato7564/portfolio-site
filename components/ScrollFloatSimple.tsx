@@ -46,17 +46,18 @@ export default function ScrollFloat({ children, className = "" }: ScrollFloatPro
     >
       {characters.map((char, index) => {
         const delay = index * 0.05;
-        const yOffset = Math.sin((scrollProgress * Math.PI) + (index * 0.5)) * 20;
+        const yOffset = 30; // 固定値にして、全文字が同じ高さで動くように
         const opacity = Math.max(0.3, scrollProgress);
         
         return (
           <span
             key={index}
-            className="inline-block transition-all duration-300 ease-out text-[clamp(2.4rem,40vw,16rem)]"
+            className="inline-block transition-all duration-300 ease-out"
             style={{
               transform: `translateY(${yOffset * (1 - scrollProgress)}px)`,
               opacity: opacity,
-              transitionDelay: `${delay}s`
+              transitionDelay: `${delay}s`,
+              fontSize: 'clamp(3.36rem, 11.2vw, 11.2rem)'
             }}
           >
             {char === ' ' ? '\u00A0' : char}
