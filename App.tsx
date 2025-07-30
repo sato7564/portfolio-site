@@ -3,7 +3,7 @@ import { Header } from "./components/Header";
 import { HomePage } from "./components/HomePage";
 import { WorksPage } from "./components/WorksPage";
 import { ProfilePage } from "./components/ProfilePage";
-import { ContactPage } from "./components/ContactPage";
+import { AboutPage } from "./components/AboutPage";
 import { Footer } from "./components/Footer";
 
 export default function App() {
@@ -21,8 +21,8 @@ export default function App() {
         return <WorksPage />;
       case 'profile':
         return <ProfilePage />;
-      case 'contact':
-        return <ContactPage />;
+      case 'about':
+        return <AboutPage />;
       case 'home':
       default:
         return <HomePage onPageChange={handlePageChange} />;

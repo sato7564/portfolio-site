@@ -9,9 +9,9 @@ export function Header({ currentPage, onPageChange }: HeaderProps) {
   const [hoveredItem, setHoveredItem] = useState<string | null>(null);
 
   const navItems = [
-    { id: 'works', english: 'Works', japanese: '作品一覧' },
     { id: 'profile', english: 'Profile', japanese: 'プロフィール' },
-    { id: 'contact', english: 'Contact', japanese: 'コンタクト' }
+    { id: 'works', english: 'Works', japanese: '作品一覧' },
+    { id: 'about', english: 'About', japanese: 'アバウト' }
   ];
 
   return (
