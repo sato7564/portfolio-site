@@ -19,13 +19,20 @@ const IMGS = [
   "https://images.unsplash.com/photo-1585970480901-90d6bb2a48b5?q=80&w=3774&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
 ];
 
-const RollingGallery = ({
+interface RollingGalleryProps {
+  autoplay?: boolean;
+  pauseOnHover?: boolean;
+  images?: string[];
+  onImageClick?: (index: number) => void;
+}
+
+const RollingGallery: React.FC<RollingGalleryProps> = ({
   autoplay = false,
   pauseOnHover = false,
   images = [],
   onImageClick,
 }) => {
-  images = images.length > 0 ? images : IMGS;
+  const galleryImages = images.length > 0 ? images : IMGS;
 
   const [isScreenSizeSm, setIsScreenSizeSm] = useState(
     window.innerWidth <= 640
@@ -37,7 +44,7 @@ const RollingGallery = ({
   }, []);
 
   const cylinderWidth = isScreenSizeSm ? 1400 : 2200;
-  const faceCount = images.length;
+  const faceCount = galleryImages.length;
   const faceWidth = (cylinderWidth / faceCount) * 1.1; // 画像が大きくなったので少し間隔を調整
   const radius = cylinderWidth / (2 * Math.PI);
 
@@ -50,7 +57,7 @@ const RollingGallery = ({
     (val) => `rotate3d(0,1,0,${val}deg)`
   );
 
-  const startInfiniteSpin = (startAngle) => {
+  const startInfiniteSpin = (startAngle: number) => {
     controls.start({
       rotateY: [startAngle, startAngle - 360],
       transition: {
@@ -71,18 +78,18 @@ const RollingGallery = ({
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [autoplay]);
 
-  const handleUpdate = (latest) => {
+  const handleUpdate = (latest: any) => {
     if (typeof latest.rotateY === "number") {
       rotation.set(latest.rotateY);
     }
   };
 
-  const handleDrag = (_, info) => {
+  const handleDrag = (_: any, info: any) => {
     controls.stop();
     rotation.set(rotation.get() + info.offset.x * dragFactor);
   };
 
-  const handleDragEnd = (_, info) => {
+  const handleDragEnd = (_: any, info: any) => {
     const finalAngle = rotation.get() + info.velocity.x * dragFactor;
     rotation.set(finalAngle);
 
@@ -138,7 +145,7 @@ const RollingGallery = ({
           }}
           className="flex min-h-[280px] cursor-grab items-center justify-center [transform-style:preserve-3d]"
         >
-          {images.map((url, i) => (
+          {galleryImages.map((url, i) => (
             <div
               key={i}
               className="group absolute flex h-fit items-center justify-center p-[2%] [backface-visibility:hidden] md:p-[2%]"

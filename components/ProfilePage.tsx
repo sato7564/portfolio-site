@@ -2,6 +2,7 @@ import { Card, CardContent } from "./ui/card";
 import { Badge } from "./ui/badge";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
 import ScrollFloat from "./ScrollFloatSimple";
+import Orb from "./Orb";
 
 export function ProfilePage() {
   const skillCategories = [
@@ -20,9 +21,20 @@ export function ProfilePage() {
   ];
 
   return (
-    <div className="container mx-auto px-4 py-20 pb-40">
-      {/* プロフィール情報 */}
-      <div className="grid lg:grid-cols-2 gap-12 items-center mb-20">
+    <div className="relative">
+      {/* Orbバックグラウンド */}
+      <div className="fixed top-0 left-0 w-full h-full pointer-events-none z-0">
+        <div className="absolute top-20 right-10 w-96 h-96 opacity-30">
+          <Orb hue={200} hoverIntensity={0} rotateOnHover={false} forceHoverState={false} />
+        </div>
+        <div className="absolute bottom-20 left-10 w-64 h-64 opacity-20">
+          <Orb hue={120} hoverIntensity={0} rotateOnHover={false} forceHoverState={false} />
+        </div>
+      </div>
+      
+      <div className="container mx-auto px-4 py-20 pb-40 relative z-10">
+        {/* プロフィール情報 */}
+        <div className="grid lg:grid-cols-2 gap-12 items-center mb-20">
         <div>
           <h1 className="text-4xl font-medium mb-6">プロフィール</h1>
           <div className="space-y-4 text-muted-foreground">
@@ -96,14 +108,15 @@ export function ProfilePage() {
         </div>
       </div>
 
-      {/* Scroll Float Text */}
-      <div className="relative mt-32 h-48">
-        <div className="absolute left-1/2 -translate-x-1/2">
-        <ScrollFloat 
-            className="font-bold text-muted-foreground"
-          >
-            YAMADA NAO
-          </ScrollFloat>
+        {/* Scroll Float Text */}
+        <div className="relative mt-32 h-48">
+          <div className="absolute left-1/2 -translate-x-1/2">
+          <ScrollFloat 
+              className="font-bold text-muted-foreground"
+            >
+              YAMADA NAO
+            </ScrollFloat>
+          </div>
         </div>
       </div>
     </div>
