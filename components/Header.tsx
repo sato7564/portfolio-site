@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Menu, X } from "lucide-react";
 
 interface HeaderProps {
   currentPage: string;
@@ -7,6 +8,7 @@ interface HeaderProps {
 
 export function Header({ currentPage, onPageChange }: HeaderProps) {
   const [hoveredItem, setHoveredItem] = useState<string | null>(null);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navItems = [
     { id: 'profile', english: 'Profile', japanese: 'プロフィール' },
@@ -84,61 +86,53 @@ export function Header({ currentPage, onPageChange }: HeaderProps) {
             })}
           </div>
 
-          {/* モバイルメニュー */}
-          <div className="md:hidden">
-            <div className="flex items-center space-x-3">
-              {navItems.map((item) => {
-                const isActive = currentPage === item.id;
-                const isHovered = hoveredItem === item.id && !isActive;
-                
-                return (
-                  <button
-                    key={item.id}
-                    onClick={() => onPageChange(item.id)}
-                    onMouseEnter={() => setHoveredItem(item.id)}
-                    onMouseLeave={() => setHoveredItem(null)}
-                    className={`relative pb-1 px-1 text-xs transition-all duration-300 min-w-[80px] ${
-                      isActive
-                        ? 'text-primary font-medium'
-                        : 'text-muted-foreground hover:text-primary'
-                    }`}
-                  >
-                    {/* アクティブタブの下線（モバイル） */}
-                    {isActive && (
-                      <div className="absolute bottom-0 left-0 right-0 h-0.5 intellectual-gradient rounded-full" />
-                    )}
-                    
-                    {/* テキストコンテナ */}
-                    <div className="relative h-5 flex items-center justify-center">
-                      {/* アクティブな場合は常に日本語、非アクティブでホバー時のみ切り替え */}
-                      {isActive ? (
-                        <span className="whitespace-nowrap">{item.japanese}</span>
-                      ) : (
-                        <>
-                          <span 
-                            className={`absolute inset-0 flex items-center justify-center transition-opacity duration-300 whitespace-nowrap ${
-                              isHovered ? 'opacity-0' : 'opacity-100'
-                            }`}
-                          >
-                            {item.english}
-                          </span>
-                          <span 
-                            className={`absolute inset-0 flex items-center justify-center transition-opacity duration-300 whitespace-nowrap ${
-                              isHovered ? 'opacity-100' : 'opacity-0'
-                            }`}
-                          >
-                            {item.japanese}
-                          </span>
-                        </>
-                      )}
-                    </div>
-                  </button>
-                );
-              })}
-            </div>
-          </div>
+          {/* モバイルメニューボタン */}
+          <button
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            className="md:hidden p-2 rounded-lg hover:bg-secondary/20 transition-colors"
+            aria-label="メニューを開く"
+          >
+            {isMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+          </button>
         </nav>
       </div>
+      
+      {/* モバイルメニュー */}
+      {isMenuOpen && (
+        <div className="md:hidden fixed inset-0 top-[65px] z-40">
+          <div 
+            className="absolute inset-0 bg-black/50"
+            onClick={() => setIsMenuOpen(false)}
+          />
+          <div className="relative bg-background border-b border-intellectual shadow-lg">
+            <nav className="container mx-auto px-4 py-4">
+              <div className="space-y-2">
+                {navItems.map((item) => {
+                  const isActive = currentPage === item.id;
+                  
+                  return (
+                    <button
+                      key={item.id}
+                      onClick={() => {
+                        onPageChange(item.id);
+                        setIsMenuOpen(false);
+                      }}
+                      className={`w-full text-left px-4 py-3 rounded-lg transition-all duration-300 ${
+                        isActive
+                          ? 'bg-primary/10 text-primary font-medium'
+                          : 'text-muted-foreground hover:bg-secondary/20 hover:text-primary'
+                      }`}
+                    >
+                      <span className="block text-sm">{item.english}</span>
+                      <span className="block text-xs opacity-70">{item.japanese}</span>
+                    </button>
+                  );
+                })}
+              </div>
+            </nav>
+          </div>
+        </div>
+      )}
     </header>
   );
 }
