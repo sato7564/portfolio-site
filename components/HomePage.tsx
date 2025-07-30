@@ -1,6 +1,7 @@
 import { Button } from "./ui/button";
 import { Badge } from "./ui/badge";
 import { Github, Linkedin, Mail, ArrowRight, Code, Palette, Lightbulb } from "lucide-react";
+import ScrollFloat from "./ScrollFloatSimple";
 
 interface HomePageProps {
   onPageChange: (page: string) => void;
@@ -8,7 +9,7 @@ interface HomePageProps {
 
 export function HomePage({ onPageChange }: HomePageProps) {
   return (
-    <div className="min-h-screen flex items-center justify-center px-4 relative">
+    <div className="min-h-screen flex items-center justify-center px-4 relative pb-96">
       {/* 背景装飾 */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-20 left-10 w-32 h-32 bg-secondary/20 rounded-full blur-xl" />
@@ -100,6 +101,15 @@ export function HomePage({ onPageChange }: HomePageProps) {
             </div>
           </div>
         </div>
+      </div>
+
+      {/* Scroll Float Test Text */}
+      <div className="absolute bottom-32 left-1/2 -translate-x-1/2">
+        <ScrollFloat 
+          className="font-bold text-muted-foreground"
+        >
+          YAMADA NAO
+        </ScrollFloat>
       </div>
     </div>
   );

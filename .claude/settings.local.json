@@ -16,7 +16,9 @@
       "Bash(curl:*)",
       "Bash(move test-site.js debugtest-site.js)",
       "Bash(mv:*)",
-      "Bash(git push:*)"
+      "Bash(git push:*)",
+      "Bash(npx jsrepo add:*)",
+      "WebFetch(domain:github.com)"
     ],
     "deny": []
   }

@@ -5,6 +5,7 @@ import { Badge } from "./ui/badge";
 import { ExternalLink, Github, Calendar, Users, Award } from "lucide-react";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
 import { ProjectModal } from "./ProjectModal";
+import ScrollFloat from "./ScrollFloatSimple";
 
 export function WorksPage() {
   const [selectedProject, setSelectedProject] = useState<any>(null);
@@ -281,6 +282,17 @@ export function WorksPage() {
         isOpen={isModalOpen}
         onClose={handleCloseModal}
       />
+
+      {/* Scroll Float Text */}
+      <div className="relative mt-32 mb-16">
+        <div className="absolute left-1/2 -translate-x-1/2">
+          <ScrollFloat 
+            className="font-bold text-muted-foreground"
+          >
+            YAMADA NAO
+          </ScrollFloat>
+        </div>
+      </div>
     </div>
   );
 }

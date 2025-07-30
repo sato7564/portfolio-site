@@ -5,6 +5,7 @@ import { Textarea } from "./ui/textarea";
 import { Label } from "./ui/label";
 import { Mail, Phone, MapPin, Clock, MessageCircle } from "lucide-react";
 import { useState } from "react";
+import ScrollFloat from "./ScrollFloatSimple";
 
 export function ContactPage() {
   const [formData, setFormData] = useState({
@@ -210,6 +211,17 @@ export function ContactPage() {
               </div>
             </CardContent>
           </Card>
+        </div>
+      </div>
+
+      {/* Scroll Float Text */}
+      <div className="relative mt-32 mb-16">
+        <div className="absolute left-1/2 -translate-x-1/2">
+          <ScrollFloat 
+            className="font-bold text-muted-foreground"
+          >
+            YAMADA NAO
+          </ScrollFloat>
         </div>
       </div>
     </div>

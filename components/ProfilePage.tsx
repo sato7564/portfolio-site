@@ -1,6 +1,7 @@
 import { Card, CardContent } from "./ui/card";
 import { Badge } from "./ui/badge";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
+import ScrollFloat from "./ScrollFloatSimple";
 
 export function ProfilePage() {
   const skillCategories = [
@@ -92,6 +93,17 @@ export function ProfilePage() {
               </CardContent>
             </Card>
           ))}
+        </div>
+      </div>
+
+      {/* Scroll Float Text */}
+      <div className="relative mt-32 mb-16">
+        <div className="absolute left-1/2 -translate-x-1/2">
+          <ScrollFloat 
+            className="font-bold text-muted-foreground"
+          >
+            YAMADA NAO
+          </ScrollFloat>
         </div>
       </div>
     </div>
