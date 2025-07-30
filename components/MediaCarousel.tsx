@@ -210,7 +210,7 @@ export function MediaCarousel({
         )}
 
         {/* Navigation Buttons */}
-        {!isVideoPlaying && mediaItems.length > 1 && (
+        {mediaItems.length > 1 && (
           <>
             {currentIndex > 0 && (
               <motion.button
@@ -246,7 +246,7 @@ export function MediaCarousel({
       </div>
 
       {/* Indicators */}
-      {!isVideoPlaying && mediaItems.length > 1 && (
+      {mediaItems.length > 1 && (
         <div className="flex justify-center mt-4">
           <div className="flex gap-2">
             {mediaItems.map((item, index) => (
