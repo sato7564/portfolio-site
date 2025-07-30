@@ -5,6 +5,7 @@ import { Badge } from "./ui/badge";
 import { ExternalLink, Github, Calendar, Users, Award } from "lucide-react";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
 import { ProjectModal } from "./ProjectModal";
+import RollingGallery from "./RollingGallery";
 import ScrollFloat from "./ScrollFloatSimple";
 
 export function WorksPage() {
@@ -207,8 +208,19 @@ export function WorksPage() {
         </p>
       </div>
       
+      {/* ローリングギャラリー */}
+      <div className="mb-12">
+        <RollingGallery 
+          images={projects.map(p => p.image)}
+          autoplay={true}
+          pauseOnHover={true}
+          onImageClick={(index) => handleProjectClick(projects[index])}
+        />
+      </div>
+      
       {/* プロジェクト一覧 */}
       <div>
+        <h2 className="text-2xl font-medium text-center mb-8">すべてのプロジェクト</h2>
         <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-6">
           {projects.map((project, index) => (
             <Card 
