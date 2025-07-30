@@ -20,7 +20,7 @@ export function ProfilePage() {
   ];
 
   return (
-    <div className="container mx-auto px-4 py-20">
+    <div className="container mx-auto px-4 py-20 pb-40">
       {/* プロフィール情報 */}
       <div className="grid lg:grid-cols-2 gap-12 items-center mb-20">
         <div>
@@ -97,9 +97,9 @@ export function ProfilePage() {
       </div>
 
       {/* Scroll Float Text */}
-      <div className="relative mt-32 mb-16">
+      <div className="relative mt-32 h-48">
         <div className="absolute left-1/2 -translate-x-1/2">
-          <ScrollFloat 
+        <ScrollFloat 
             className="font-bold text-muted-foreground"
           >
             YAMADA NAO

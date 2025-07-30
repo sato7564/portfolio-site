@@ -3,7 +3,7 @@ import ScrollFloat from "./ScrollFloatSimple";
 
 export function AboutPage() {
   return (
-    <div className="container mx-auto px-4 py-20">
+    <div className="container mx-auto px-4 py-20 pb-40">
       <div className="text-center mb-12">
         <h1 className="text-4xl font-medium mb-4">私について</h1>
         <p className="text-muted-foreground max-w-2xl mx-auto">
@@ -121,9 +121,9 @@ export function AboutPage() {
       </div>
 
       {/* Scroll Float Text */}
-      <div className="relative mt-32 mb-16">
+      <div className="relative mt-32 h-48">
         <div className="absolute left-1/2 -translate-x-1/2">
-          <ScrollFloat 
+        <ScrollFloat 
             className="font-bold text-muted-foreground"
           >
             YAMADA NAO

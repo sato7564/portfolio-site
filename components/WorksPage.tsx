@@ -192,7 +192,7 @@ export function WorksPage() {
   };
 
   return (
-    <div className="container mx-auto px-4 py-20">
+    <div className="container mx-auto px-4 py-20 pb-40">
       <div className="text-center mb-16">
         <Badge variant="secondary" className="mb-4 bg-secondary/80 text-secondary-foreground border border-secondary">
           <Award className="w-3 h-3 mr-1" />
@@ -284,9 +284,9 @@ export function WorksPage() {
       />
 
       {/* Scroll Float Text */}
-      <div className="relative mt-32 mb-16">
+      <div className="relative mt-32 h-48">
         <div className="absolute left-1/2 -translate-x-1/2">
-          <ScrollFloat 
+        <ScrollFloat 
             className="font-bold text-muted-foreground"
           >
             YAMADA NAO
