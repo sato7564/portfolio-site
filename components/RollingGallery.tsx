@@ -37,15 +37,20 @@ const RollingGallery: React.FC<RollingGalleryProps> = ({
   const [isScreenSizeSm, setIsScreenSizeSm] = useState(
     window.innerWidth <= 640
   );
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  
   useEffect(() => {
-    const handleResize = () => setIsScreenSizeSm(window.innerWidth <= 640);
+    const handleResize = () => {
+      setIsScreenSizeSm(window.innerWidth <= 640);
+      setWindowWidth(window.innerWidth);
+    };
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  const cylinderWidth = isScreenSizeSm ? 1400 : 2200;
+  const cylinderWidth = isScreenSizeSm ? windowWidth * 2.5 : 2200;
   const faceCount = galleryImages.length;
-  const faceWidth = (cylinderWidth / faceCount) * 1.1; // 画像が大きくなったので少し間隔を調整
+  const faceWidth = (cylinderWidth / faceCount) * 1.1;
   const radius = cylinderWidth / (2 * Math.PI);
 
   const dragFactor = 0.05;
@@ -111,7 +116,7 @@ const RollingGallery: React.FC<RollingGalleryProps> = ({
   };
 
   return (
-    <div className="relative h-[360px] w-full overflow-hidden">
+    <div className="relative h-[200px] sm:h-[360px] w-full overflow-hidden">
       <div
         className="absolute top-0 left-0 h-full w-[48px] z-10"
         style={{
@@ -143,7 +148,7 @@ const RollingGallery: React.FC<RollingGalleryProps> = ({
             width: cylinderWidth,
             transformStyle: "preserve-3d",
           }}
-          className="flex min-h-[280px] cursor-grab items-center justify-center [transform-style:preserve-3d]"
+          className="flex min-h-[150px] sm:min-h-[280px] cursor-grab items-center justify-center [transform-style:preserve-3d]"
         >
           {galleryImages.map((url, i) => (
             <div
@@ -158,9 +163,8 @@ const RollingGallery: React.FC<RollingGalleryProps> = ({
               <img
                 src={url}
                 alt="gallery"
-                className="h-[280px] w-[420px] rounded-[10px] border-[2px] border-white object-cover
-                           transition-transform duration-300 ease-out group-hover:scale-105 cursor-pointer
-                           sm:h-[200px] sm:w-[300px]"
+                className="h-[120px] w-[180px] sm:h-[280px] sm:w-[420px] rounded-[6px] sm:rounded-[10px] border-[1px] sm:border-[2px] border-white object-cover
+                           transition-transform duration-300 ease-out group-hover:scale-105 cursor-pointer"
                 onClick={() => onImageClick && onImageClick(i)}
               />
             </div>
