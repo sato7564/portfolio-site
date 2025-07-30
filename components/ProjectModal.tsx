@@ -1,9 +1,8 @@
-import { useState } from "react";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "./ui/dialog";
 import { Button } from "./ui/button";
 import { Badge } from "./ui/badge";
-import { ChevronLeft, ChevronRight, ExternalLink, Github, Calendar, Users, Play } from "lucide-react";
-import { ImageWithFallback } from "./figma/ImageWithFallback";
+import { ExternalLink, Github, Calendar, Users } from "lucide-react";
+import { MediaCarousel } from "./MediaCarousel";
 
 interface ProjectModalProps {
   project: {
@@ -27,33 +26,9 @@ interface ProjectModalProps {
 }
 
 export function ProjectModal({ project, isOpen, onClose }: ProjectModalProps) {
-  const [currentImageIndex, setCurrentImageIndex] = useState(0);
-  const [isVideoPlaying, setIsVideoPlaying] = useState(false);
-
   if (!project) return null;
 
-  const allMedia = [
-    ...(project.images || []),
-    ...(project.videoThumbnail ? [project.videoThumbnail] : [])
-  ];
-
-  const isVideoIndex = project.videoThumbnail && currentImageIndex === allMedia.length - 1;
-
-  const handlePrevious = () => {
-    setCurrentImageIndex((prev) => (prev === 0 ? allMedia.length - 1 : prev - 1));
-    setIsVideoPlaying(false);
-  };
-
-  const handleNext = () => {
-    setCurrentImageIndex((prev) => (prev === allMedia.length - 1 ? 0 : prev + 1));
-    setIsVideoPlaying(false);
-  };
-
-  const handleVideoClick = () => {
-    if (isVideoIndex && project.videoUrl) {
-      setIsVideoPlaying(true);
-    }
-  };
+  const hasMedia = (project.images && project.images.length > 0) || (project.videoUrl && project.videoThumbnail);
 
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
@@ -77,76 +52,15 @@ export function ProjectModal({ project, isOpen, onClose }: ProjectModalProps) {
           </div>
         </DialogHeader>
 
-        {/* 画像ギャラリー */}
-        {allMedia.length > 0 && (
-          <div className="relative mb-6">
-            <div className="aspect-video bg-muted rounded-lg overflow-hidden">
-              {isVideoPlaying && isVideoIndex ? (
-                <iframe
-                  src={`https://www.youtube.com/embed/${project.videoUrl?.split('v=')[1]}?autoplay=1`}
-                  className="w-full h-full"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                />
-              ) : (
-                <div className="relative w-full h-full">
-                  <ImageWithFallback
-                    src={allMedia[currentImageIndex]}
-                    alt={`${project.title} - ${currentImageIndex + 1}`}
-                    className="w-full h-full object-cover"
-                  />
-                  {isVideoIndex && (
-                    <button
-                      onClick={handleVideoClick}
-                      className="absolute inset-0 flex items-center justify-center bg-black/30 hover:bg-black/40 transition-colors"
-                    >
-                      <div className="w-16 h-16 bg-white/90 rounded-full flex items-center justify-center">
-                        <Play className="w-8 h-8 text-primary ml-1" />
-                      </div>
-                    </button>
-                  )}
-                </div>
-              )}
-            </div>
-            
-            {allMedia.length > 1 && (
-              <>
-                <Button
-                  size="icon"
-                  variant="ghost"
-                  className="absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white/90 hover:bg-white shadow-md hover:shadow-lg transition-all"
-                  onClick={handlePrevious}
-                >
-                  <ChevronLeft className="h-5 w-5 text-primary" />
-                </Button>
-                <Button
-                  size="icon"
-                  variant="ghost"
-                  className="absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white/90 hover:bg-white shadow-md hover:shadow-lg transition-all"
-                  onClick={handleNext}
-                >
-                  <ChevronRight className="h-5 w-5 text-primary" />
-                </Button>
-                
-                {/* インジケーター */}
-                <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
-                  {allMedia.map((_, index) => (
-                    <button
-                      key={index}
-                      className={`w-2 h-2 rounded-full transition-colors ${
-                        index === currentImageIndex
-                          ? 'bg-primary'
-                          : 'bg-white/50 hover:bg-white/70'
-                      }`}
-                      onClick={() => {
-                        setCurrentImageIndex(index);
-                        setIsVideoPlaying(false);
-                      }}
-                    />
-                  ))}
-                </div>
-              </>
-            )}
+        {/* メディアギャラリー */}
+        {hasMedia && (
+          <div className="mb-6">
+            <MediaCarousel
+              images={project.images}
+              videoUrl={project.videoUrl}
+              videoThumbnail={project.videoThumbnail}
+              aspectRatio={16 / 9}
+            />
           </div>
         )}
 

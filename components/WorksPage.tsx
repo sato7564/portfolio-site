@@ -77,8 +77,8 @@ export function WorksPage() {
         "https://images.unsplash.com/photo-1522542550221-31fd19575a2d?w=800&h=600&fit=crop",
         "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=800&h=600&fit=crop"
       ],
-      videoUrl: "https://www.youtube.com/watch?v=j1Lc_eov5Po",
-      videoThumbnail: "https://img.youtube.com/vi/j1Lc_eov5Po/maxresdefault.jpg",
+      videoUrl: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+      videoThumbnail: "https://img.youtube.com/vi/dQw4w9WgXcQ/maxresdefault.jpg",
       tags: ["React", "Tailwind CSS", "Motion", "Vercel", "SEO"],
       liveUrl: "https://example.com",
       githubUrl: "https://github.com",
