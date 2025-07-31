@@ -13,196 +13,178 @@ export function WorksPage() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const projects = [
     {
-      title: "演劇サークル立ち上げ・舞台公演",
-      description: "専門学校で演劇サークルを創設し、18人で「沙羅双樹のハムレット」を上演。演劇初心者が多い中、スケジュール調整と演技指導を担当し、200人以上を動員する公演を実現。",
-      longDescription: "2021年夏、専門学校で演劇サークルを創設し、演劇経験者がほとんどいない18人のメンバーと共に「沙羅双樹のハムレット」を上演しました。プロジェクト管理スキルとリーダーシップを活かし、ゼロから組織を立ち上げ、成功裏に公演を実現。特に重視したのは、初心者への段階的な指導と、18人全員のスケジュール調整でした。",
-      image: "https://images.unsplash.com/photo-1503095396549-807759245b35?w=600&h=400&fit=crop",
+      title: "おえかきシューター",
+      description: "「描いたイラストが動く！」をコンセプトにした子供向けシューティングゲーム。神戸電子専門学校のゲームコンペでアイディア賞を受賞。初のチーム制作でリーダーとして6人を統括。",
+      longDescription: "1年次のチーム制作で開発した、子供向けシューティングゲームです。プレイヤーが描いた絵がそのままゲーム内のキャラクターとして動き出す、創造性を刺激する作品。Trelloを活用したタスク管理と半月ごとの満足度アンケートでチーム運営を成功させました。",
+      image: "https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=600&h=400&fit=crop",
       images: [
-        "https://images.unsplash.com/photo-1503095396549-807759245b35?w=800&h=600&fit=crop",
-        "https://images.unsplash.com/photo-1507676184212-d03ab07a01bf?w=800&h=600&fit=crop",
-        "https://images.unsplash.com/photo-1516307365426-bea591f05011?w=800&h=600&fit=crop"
+        "https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=800&h=600&fit=crop",
+        "https://images.unsplash.com/photo-1605899435973-ca2d1a8861cf?w=800&h=600&fit=crop",
+        "https://images.unsplash.com/photo-1612198188060-c7c2a3b66eae?w=800&h=600&fit=crop"
       ],
-      tags: ["プロジェクト管理", "リーダーシップ", "チームビルディング", "演出", "スケジュール管理"],
-      category: "マネジメント",
-      year: "2021",
-      team: "18人",
+      tags: ["Unity", "C#", "チーム開発", "Trello", "ゲームデザイン"],
+      category: "ゲーム開発",
+      year: "専門学校1年次",
+      team: "6人",
       featured: true,
+      award: "神戸電子専門学校ゲームコンペ「アイディア賞」",
       features: [
-        "ゼロからの演劇サークル立ち上げと組織運営",
-        "18人のメンバーのスケジュール調整と稽古計画",
-        "演劇初心者15人への基礎演技指導",
-        "6ヶ月間のプロジェクト管理と公演実現",
-        "200人以上の観客動員を達成"
+        "お絵かき機能とシューティングゲームの融合",
+        "子供向けの直感的なUI設計",
+        "クリックやカーソル移動に反応する遊び心のある演出",
+        "Trelloを活用した効率的なプロジェクト管理",
+        "チームメンバーの満足度を重視した運営"
       ],
-      techDetails: "この経験は、後の技術プロジェクトマネジメントの基礎となりました。多様なバックグラウンドを持つチームメンバーをまとめ、共通の目標に向かって導くスキル、限られたリソースでの創造的な問題解決、そして締切厳守のプレッシャー下でのパフォーマンス管理など、現在のソフトウェア開発にも直接活かされています。"
+      techDetails: "Unityで開発し、子供の創造力を育むゲームシステムを実現。初めてのチーム開発でしたが、管理ツールの活用と定期的な振り返りにより、計画通りプロジェクトを完走させることができました。"
     },
     {
-      title: "Eコマースダッシュボード",
-      description: "React、TypeScript、Supabaseを使用した現代的なEコマース管理システム。売上分析、在庫管理、顧客管理機能を含む包括的なダッシュボード。リアルタイムでの在庫更新や売上レポートの自動生成機能により、効率的な店舗運営をサポートします。",
-      longDescription: "このEコマースダッシュボードは、中小規模のオンラインストアオーナー向けに開発された包括的な管理システムです。React 18とTypeScriptを使用し、型安全性と保守性を確保しています。バックエンドにはSupabaseを採用し、リアルタイムデータベース機能により在庫の即時更新を実現。Chart.jsを活用した視覚的な売上分析機能では、日別・月別・商品カテゴリ別の売上推移を直感的に把握できます。",
-      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop",
+      title: "裏斬リッシュ（うらぎりっしゅ）",
+      description: "4人プレイヤーの中に潜む1人の裏切り者を探す人狼系アクションゲーム。「Among Us」に戦隊もの・仮面ライダーの要素を融合。卒業制作として8人チームを統括。",
+      longDescription: "卒業制作として開発した、オンライン対戦型の人狼系アクションゲームです。リアルタイムバトルと推理要素を組み合わせ、日本の特撮文化を取り入れた独自の演出が特徴。これまでの経験を総動員し、8人という最大規模のチームを成功に導きました。",
+      image: "https://images.unsplash.com/photo-1535223289827-42f1e9919769?w=600&h=400&fit=crop",
       images: [
-        "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop",
-        "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop",
-        "https://images.unsplash.com/photo-1556761175-4b46a572b786?w=800&h=600&fit=crop"
+        "https://images.unsplash.com/photo-1535223289827-42f1e9919769?w=800&h=600&fit=crop",
+        "https://images.unsplash.com/photo-1552820728-8b83bb6b773f?w=800&h=600&fit=crop",
+        "https://images.unsplash.com/photo-1598875706250-21faaf804361?w=800&h=600&fit=crop"
       ],
-      videoUrl: "https://www.youtube.com/watch?v=j1Lc_eov5Po",
-      videoThumbnail: "https://img.youtube.com/vi/j1Lc_eov5Po/maxresdefault.jpg",
-      tags: ["React", "TypeScript", "Supabase", "Tailwind CSS", "Chart.js"],
-      liveUrl: "https://example.com",
-      githubUrl: "https://github.com",
-      category: "ダッシュボード",
-      year: "2024",
-      team: "3人",
+      tags: ["Unity", "C#", "オンラインマルチプレイ", "ゲームデザイン", "チームリーダー"],
+      category: "ゲーム開発",
+      year: "専門学校卒業制作",
+      team: "8人",
       featured: true,
+      competition: "ゲームクリエイター甲子園応募",
       features: [
-        "リアルタイムの在庫管理と自動アラート機能",
-        "AIを活用した売上予測と推奨仕入れ提案",
-        "顧客の購買履歴分析とパーソナライズドマーケティング",
-        "多言語対応（日本語・英語・中国語）",
-        "モバイルレスポンシブデザイン"
+        "4人対戦のオンラインマルチプレイ実装",
+        "アクションと推理要素の融合",
+        "戦隊もの風の演出（変身シーン、決めポーズ等）",
+        "コミカルなダンスシーンと印象的な撃墜演出",
+        "8人規模のチーム管理と開発統括"
       ],
-      techDetails: "フロントエンドはReact 18のConcurrent Featuresを活用し、大量データの表示でもスムーズなUXを実現。状態管理にはZustandを採用し、シンプルかつ効率的なデータフローを構築。バックエンドのSupabaseではRow Level Securityを実装し、セキュアなデータアクセスを保証しています。"
+      techDetails: "Unity＋オンラインマルチプレイで、リアルタイム同期と低遅延を実現。専門学校で培ったすべての経験を注ぎ込んだ集大成作品として、技術的にも内容的にも充実した作品を完成させました。"
     },
     {
-      title: "タスク管理アプリ",
-      description: "チーム向けの直感的なタスク管理アプリケーション。ドラッグ&ドロップ機能、リアルタイム同期、プロジェクト管理機能を搭載。チームメンバー間でのタスクの進捗状況を可視化し、効率的なプロジェクト管理を実現します。",
-      longDescription: "リモートワークが普及する中、チームの生産性向上を目的として開発されたタスク管理アプリケーションです。Next.js 14のApp Routerを採用し、高速なページ遷移とSEO最適化を実現。Socket.IOによるWebSocket通信で、チームメンバーのアクションがリアルタイムで同期されます。",
-      image: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=600&h=400&fit=crop",
+      title: "メービードゥーン",
+      description: "魚型クリーチャーを使役して洞窟を探索するアクションゲーム。コロナ禍でのオンライン開発を成功させ、日本ゲーム大賞アマチュア部門に応募。",
+      longDescription: "3年次のチーム制作で開発した、魚型のクリーチャーを使役して洞窟を探索するアクションゲームです。コロナ禍という制約の中、朝夕のミーティングとGitを活用してオンライン開発を成功させました。各メンバーがUnityの特定機能のプロフェッショナルになることを目指し、チーム全体の技術力向上を実現。",
+      image: "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=600&h=400&fit=crop",
       images: [
-        "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=800&h=600&fit=crop",
-        "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=800&h=600&fit=crop",
-        "https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?w=800&h=600&fit=crop"
+        "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=800&h=600&fit=crop",
+        "https://images.unsplash.com/photo-1583212292454-1fe6229603b7?w=800&h=600&fit=crop",
+        "https://images.unsplash.com/photo-1574482620811-1aa16ffe3c82?w=800&h=600&fit=crop"
       ],
-      videoUrl: "https://www.youtube.com/watch?v=j1Lc_eov5Po",
-      videoThumbnail: "https://img.youtube.com/vi/j1Lc_eov5Po/maxresdefault.jpg",
-      tags: ["Next.js", "Prisma", "PostgreSQL", "Framer Motion", "Socket.IO"],
-      liveUrl: "https://example.com",
-      githubUrl: "https://github.com",
-      category: "生産性ツール",
-      year: "2024",
-      team: "2人",
+      tags: ["Unity", "C#", "Git", "オンライン開発", "チームリーダー"],
+      category: "ゲーム開発",
+      year: "専門学校3年次",
+      team: "6人",
       featured: true,
+      competition: "日本ゲーム大賞アマチュア部門",
       features: [
-        "カンバンボード式のタスク管理",
-        "ガントチャートによるプロジェクト全体の可視化",
-        "Slackとの連携による通知機能",
-        "タイムトラッキング機能",
-        "レポート自動生成機能"
+        "魚型クリーチャーの多彩なアクション",
+        "広大な洞窟ステージの探索要素",
+        "OPムービーや図鑑機能などの充実したコンテンツ",
+        "オンライン開発体制の確立（朝夕ミーティング）",
+        "メンバーの専門性向上を重視した開発"
       ],
-      techDetails: "Prismaを使用したタイプセーフなデータベースアクセス、Framer Motionによる滑らかなアニメーション、そしてOptimistic UIパターンの採用により、レスポンシブで快適なユーザー体験を提供しています。"
+      techDetails: "Unity開発において、各メンバーが特定機能（シェーダー、AI、UI等）のエキスパートになることで、チーム全体の技術力を向上。大規模プロジェクトながら計画的な開発により完成度の高い作品に仕上げました。"
     },
     {
-      title: "ポートフォリオサイト",
-      description: "レスポンシブデザインとダークモード対応のモダンなポートフォリオサイト。スムーズなアニメーションと最適化されたパフォーマンス。SEO対策も施し、検索エンジンでの上位表示を狙える設計になっています。",
-      longDescription: "個人のスキルと実績を効果的にアピールするために開発したポートフォリオサイトです。React 18とTailwind CSSを組み合わせ、モダンで洗練されたデザインを実現。Framer Motionによる滑らかなアニメーションで、訪問者に印象的な体験を提供します。",
-      image: "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=600&h=400&fit=crop",
+      title: "Claim",
+      description: "顔面が迫りくるホラーゲーム。DirectX 11を使用した技術的に挑戦的な個人制作作品。A*経路探索アルゴリズムとステージエディタを自力で実装。",
+      longDescription: "2年次に就職活動用として制作した、技術力をアピールするホラーゲームです。Unity等の既存エンジンを使わず、DirectX 11 APIを直接使用して開発。A*経路探索アルゴリズムによる賢い敵AIや、ステージエディタの実装など、低レベルプログラミングの深い理解を示す作品です。",
+      image: "https://images.unsplash.com/photo-1509248961158-e54f6934749c?w=600&h=400&fit=crop",
       images: [
-        "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=800&h=600&fit=crop",
-        "https://images.unsplash.com/photo-1522542550221-31fd19575a2d?w=800&h=600&fit=crop",
-        "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=800&h=600&fit=crop"
+        "https://images.unsplash.com/photo-1509248961158-e54f6934749c?w=800&h=600&fit=crop",
+        "https://images.unsplash.com/photo-1628155930542-3c7a64e2c833?w=800&h=600&fit=crop",
+        "https://images.unsplash.com/photo-1604975999044-188783d54fb3?w=800&h=600&fit=crop"
       ],
-      videoUrl: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-      videoThumbnail: "https://img.youtube.com/vi/dQw4w9WgXcQ/maxresdefault.jpg",
-      tags: ["React", "Tailwind CSS", "Motion", "Vercel", "SEO"],
-      liveUrl: "https://example.com",
-      githubUrl: "https://github.com",
-      category: "ウェブサイト",
-      year: "2023",
+      tags: ["DirectX 11", "C++", "A*アルゴリズム", "ホラーゲーム", "個人制作"],
+      category: "ゲーム開発",
+      year: "専門学校2年次",
+      team: "1人（個人制作）",
+      featured: false,
+      features: [
+        "DirectX 11を直接使用した低レベル開発",
+        "A*経路探索アルゴリズムの自力実装",
+        "ステージエディタの開発",
+        "効果的なホラー演出の実装",
+        "調査力と粘り強さで技術的課題を克服"
+      ],
+      techDetails: "既存エンジンに頼らず、DirectX 11 APIを直接使用することで、グラフィックスプログラミングの深い理解を獲得。短期間でインパクトのある作品を作るという目標を達成し、技術力の高さを証明しました。"
+    },
+    {
+      title: "LINE占いコンテンツ開発",
+      description: "LINE公式アカウント上で動作する占いコンテンツ。JavaScript未経験ながらAI活用により2ヶ月で商用レベルの品質を実現。",
+      longDescription: "知人からの依頼で開発した、LINE公式アカウント上で動作する占いコンテンツです。LINE開発やJavaScriptが未経験でしたが、AIを活用した効率的な開発手法により、約2ヶ月という短期間で実装を完了。非エンジニアでも占い内容を更新できるデータエディタも開発し、運用面まで考慮したシステムを構築しました。",
+      image: "https://images.unsplash.com/photo-1632772998017-15e4a8ec0f17?w=600&h=400&fit=crop",
+      images: [
+        "https://images.unsplash.com/photo-1632772998017-15e4a8ec0f17?w=800&h=600&fit=crop",
+        "https://images.unsplash.com/photo-1577563908411-5077b6dc7624?w=800&h=600&fit=crop",
+        "https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?w=800&h=600&fit=crop"
+      ],
+      tags: ["JavaScript", "LINE API", "AI活用", "データエディタ", "商用開発"],
+      category: "ビジネス開発",
+      year: "2024年9-10月",
       team: "1人",
       featured: false,
+      type: "受託開発",
       features: [
-        "レスポンシブデザインで全デバイス対応",
-        "ダークモード/ライトモードの切り替え機能",
-        "Lazy Loadingによる高速ページ読み込み",
-        "SEO最適化による検索順位向上",
-        "アクセシビリティ対応（WCAG 2.1準拠）"
+        "LINE Messaging APIを活用した占いシステム",
+        "AIを活用した効率的な開発プロセス",
+        "非エンジニア向けデータエディタの開発",
+        "商用レベルの品質とUX",
+        "2ヶ月という短期間での完成"
       ],
-      techDetails: "Next.jsのSSGを活用し、高速なページ配信を実現。画像最適化にはnext/imageを使用し、Core Web Vitalsで高スコアを達成。GitHub Actionsによる自動デプロイパイプラインも構築しています。"
+      techDetails: "未経験技術への挑戦でしたが、AIツールを戦略的に活用することで学習と開発を同時進行。社会人経験で培った問題解決能力により、短期間で商用レベルのシステムを構築できました。"
     },
     {
-      title: "レシピ共有アプリ",
-      description: "料理好きのためのレシピ共有プラットフォーム。ユーザー投稿機能、評価・レビューシステム、お気に入り機能などを実装。画像アップロード機能や検索・フィルタリング機能により、使いやすさを追求しました。",
-      longDescription: "料理愛好家のコミュニティを活性化させるために開発したレシピ共有プラットフォームです。Vue.js 3のComposition APIを採用し、再利用可能なコンポーネント設計を実現。Firebaseのリアルタイムデータベースにより、レシピの更新がリアルタイムで反映されます。",
-      image: "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=600&h=400&fit=crop",
+      title: "持たないで、モアイさん",
+      description: "モアイをモチーフにしたキャラクタービジネス。LINEスタンプ販売とX(Twitter)での4コマ漫画配信を展開中。",
+      longDescription: "「自分のイラストを商品にしたい」という思いから始めたキャラクタービジネスプロジェクトです。趣味のタロットカードから着想を得た独自性のあるキャラクター「モアイさん」を創造。「持つ」というアクションを強調することで、グッズ展開やキャラクターへの親しみを深める工夫をしています。",
+      image: "https://images.unsplash.com/photo-1656337875867-c83bb0e50c67?w=600&h=400&fit=crop",
       images: [
-        "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800&h=600&fit=crop",
-        "https://images.unsplash.com/photo-1495521821757-a1efb6729352?w=800&h=600&fit=crop",
-        "https://images.unsplash.com/photo-1466637574441-749b8f19452f?w=800&h=600&fit=crop"
+        "https://images.unsplash.com/photo-1656337875867-c83bb0e50c67?w=800&h=600&fit=crop",
+        "https://images.unsplash.com/photo-1578761499019-d71ff2d0e433?w=800&h=600&fit=crop",
+        "https://images.unsplash.com/photo-1593085512500-5d55148d6f0d?w=800&h=600&fit=crop"
       ],
-      videoUrl: "https://www.youtube.com/watch?v=j1Lc_eov5Po",
-      videoThumbnail: "https://img.youtube.com/vi/j1Lc_eov5Po/maxresdefault.jpg",
-      tags: ["Vue.js", "Firebase", "Vuetify", "PWA"],
-      liveUrl: "https://example.com",
-      githubUrl: "https://github.com",
-      category: "ソーシャル",
-      year: "2023",
-      team: "4人",
+      tags: ["キャラクターデザイン", "LINEスタンプ", "SNSマーケティング", "イラスト"],
+      category: "キャラクタービジネス",
+      year: "2024年10月〜",
+      team: "1人",
       featured: false,
+      status: "進行中",
       features: [
-        "レシピの投稿・編集・削除機能",
-        "材料からのレシピ検索機能",
-        "調理時間・カロリー表示",
-        "ユーザーフォロー機能",
-        "オフライン対応（PWA）"
+        "独自性のあるキャラクターデザイン",
+        "LINEスタンプとしての商品化",
+        "X(Twitter)での定期的な4コマ漫画配信",
+        "「持つ」アクションを活かしたグッズ展開計画",
+        "ファンとのインタラクション重視"
       ],
-      techDetails: "Vuetifyによるマテリアルデザインの実装、Firebase Authenticationによる安全な認証システム、Cloud Storageを使用した画像の最適化と配信を実現。PWA対応により、オフラインでもレシピの閲覧が可能です。"
+      techDetails: "ゲーム開発で培った「ユーザーを楽しませる」視点を活かし、親しみやすいキャラクター作りを実現。SNSマーケティングを通じて認知度向上を図り、将来的なIPビジネス化を目指しています。"
     },
     {
-      title: "不動産検索サイト",
-      description: "地図連動型の不動産検索プラットフォーム。高度な検索フィルター、地図上での物件表示、バーチャルツアー機能を実装。不動産会社様向けの管理画面も同時開発し、物件情報の更新が簡単に行える仕組みを構築しました。",
-      longDescription: "不動産業界のDX推進を目的として開発した、地図連動型の物件検索プラットフォームです。Google Maps APIを活用し、直感的な物件探しを実現。360度画像によるバーチャルツアー機能で、現地に行かなくても物件の雰囲気を確認できます。",
-      image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=600&h=400&fit=crop",
+      title: "多得ルワー子（Vtuber）",
+      description: "AI画像生成、Live2D、AI音声変換などの最新技術を駆使したVtuberプロジェクト。技術的な挑戦を通じてエンターテイメントを創出。",
+      longDescription: "最新技術を活用してエンターテイメントを創出する試みとして始めたVtuberプロジェクトです。AIによる画像生成でキャラクターデザインを作成し、Live2Dでモデリング、AI音声変換で声を作成。フェイストラッキングにより滑らかに動くVtuberを実現しました。",
+      image: "https://images.unsplash.com/photo-1637858868799-7f26a0640eb6?w=600&h=400&fit=crop",
       images: [
-        "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&h=600&fit=crop",
-        "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=600&fit=crop",
-        "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=800&h=600&fit=crop"
+        "https://images.unsplash.com/photo-1637858868799-7f26a0640eb6?w=800&h=600&fit=crop",
+        "https://images.unsplash.com/photo-1649183424680-464747a8e43d?w=800&h=600&fit=crop",
+        "https://images.unsplash.com/photo-1636955779321-819753cd1741?w=800&h=600&fit=crop"
       ],
-      videoUrl: "https://www.youtube.com/watch?v=j1Lc_eov5Po",
-      videoThumbnail: "https://img.youtube.com/vi/j1Lc_eov5Po/maxresdefault.jpg",
-      tags: ["React", "Google Maps API", "Node.js", "MongoDB"],
-      liveUrl: "https://example.com",
-      githubUrl: "https://github.com",
-      category: "ビジネス",
-      year: "2023",
-      team: "5人",
+      tags: ["AI画像生成", "Live2D", "AI音声変換", "フェイストラッキング", "配信技術"],
+      category: "エンターテインメント",
+      year: "2024年10月〜",
+      team: "1人",
       featured: false,
+      status: "進行中",
       features: [
-        "地図上での物件表示と絞り込み検索",
-        "360度画像によるバーチャルツアー",
-        "AIによる物件推薦機能",
-        "不動産会社向け管理ダッシュボード",
-        "LINE通知連携"
+        "AI技術を活用したキャラクター制作",
+        "Live2Dによる自然な動きの実現",
+        "AI音声変換でのキャラクターボイス",
+        "フェイストラッキングによる表情豊かな演出",
+        "複数の最新技術の統合"
       ],
-      techDetails: "React Query による効率的なデータ取得、Node.js + Express によるRESTful API設計、MongoDBの地理空間インデックスを活用した高速な位置情報検索を実装。管理画面はRole-based Access Controlで権限管理を行っています。"
-    },
-    {
-      title: "学習管理システム",
-      description: "オンライン学習をサポートする包括的なLMS（学習管理システム）。動画コンテンツ配信、進捗管理、クイズ機能、掲示板機能などを実装。受講者と講師の双方にとって使いやすいインターフェースを実現しました。",
-      longDescription: "コロナ禍でのオンライン教育需要に応えるために開発した学習管理システムです。Next.js 13のApp Routerを採用し、高速なページ遷移を実現。WebRTCによるリアルタイム授業配信機能で、インタラクティブな学習体験を提供します。",
-      image: "https://images.unsplash.com/photo-1501504905252-473c47e087f8?w=600&h=400&fit=crop",
-      images: [
-        "https://images.unsplash.com/photo-1501504905252-473c47e087f8?w=800&h=600&fit=crop",
-        "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800&h=600&fit=crop",
-        "https://images.unsplash.com/photo-1523580846011-d3a5bc25702b?w=800&h=600&fit=crop"
-      ],
-      videoUrl: "https://www.youtube.com/watch?v=j1Lc_eov5Po",
-      videoThumbnail: "https://img.youtube.com/vi/j1Lc_eov5Po/maxresdefault.jpg",
-      tags: ["Next.js", "Prisma", "Stripe", "Video.js", "WebRTC"],
-      liveUrl: "https://example.com",
-      githubUrl: "https://github.com",
-      category: "教育",
-      year: "2022",
-      team: "6人",
-      featured: false,
-      features: [
-        "動画授業のストリーミング配信",
-        "リアルタイム授業とチャット機能",
-        "自動採点クイズシステム",
-        "学習進捗の可視化ダッシュボード",
-        "Stripe決済による課金システム"
-      ],
-      techDetails: "Prisma によるタイプセーフなDB操作、Video.jsを使用したHLS動画配信、Socket.IOによるリアルタイムチャット機能を実装。Stripeのサブスクリプション機能で月額課金システムも構築しています。"
+      techDetails: "社会人経験で培った問題解決能力を活かし、トライ＆エラーを繰り返すことで、複数の最新技術を統合したシステムを構築。技術的な挑戦を通じて、新しいエンターテイメントの形を模索しています。"
     }
   ];
 
@@ -329,7 +311,7 @@ export function WorksPage() {
         <ScrollFloat 
             className="font-bold text-muted-foreground"
           >
-            YAMADA NAO
+            OKA SATOSHI
           </ScrollFloat>
         </div>
       </div>

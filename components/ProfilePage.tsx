@@ -8,16 +8,16 @@ import GlareHover from "./GlareHover";
 export function ProfilePage() {
   const skillCategories = [
     {
-      title: "フロントエンド",
-      skills: ["React", "TypeScript", "Next.js", "Tailwind CSS", "Framer Motion", "Zustand"]
+      title: "ゲーム開発",
+      skills: ["Unity", "C#", "DirectX 11", "C++", "ゲームデザイン", "Live2D"]
     },
     {
-      title: "バックエンド",
-      skills: ["Node.js", "Express", "PostgreSQL", "Supabase", "Prisma", "REST API"]
+      title: "Web開発",
+      skills: ["JavaScript", "LINE API", "React", "TypeScript", "Node.js", "HTML/CSS"]
     },
     {
-      title: "ツール & その他",
-      skills: ["Git", "Docker", "Figma", "Jest", "Cypress", "Vercel"]
+      title: "ツール & スキル",
+      skills: ["AI活用", "Git", "Trello", "Slack", "プロジェクト管理", "チームマネジメント"]
     }
   ];
 
@@ -40,16 +40,16 @@ export function ProfilePage() {
           <h1 className="text-4xl font-medium mb-6">プロフィール</h1>
           <div className="space-y-4 text-muted-foreground">
             <p>
-              こんにちは！山田直央です。5年以上の経験を持つフロントエンドデベロッパーとして、
-              ユーザー中心の設計と最新技術を組み合わせて、魅力的なWebアプリケーションを作成しています。
+              こんにちは！岡悟史です。26歳のゲームプログラマー・クリエイターとして、
+              「思い立ったら、すぐ形に」をモットーに企画から開発まで一貫して手がけています。
             </p>
             <p>
-              私は特にReact、TypeScript、そしてモダンなCSS技術に精通しており、
-              パフォーマンスとアクセシビリティを重視した開発を心がけています。
+              株式会社レベルファイブでのゲーム開発経験を活かし、現在は独立してLINE占いコンテンツ、
+              Vtuberプロジェクト、キャラクタービジネスなど多分野でのプロジェクトを推進しています。
             </p>
             <p>
-              新しい技術を学ぶことが大好きで、常にベストプラクティスを追求し、
-              チームと協力して素晴らしいプロダクトを生み出すことに情熱を注いでいます。
+              企画力・開発力・統率力をバランスよく備え、チームを率いて数々の受賞作品を生み出してきました。
+              AI技術の活用にも積極的で、常に新しい技術に挑戦し続けています。
             </p>
           </div>
           
@@ -57,19 +57,24 @@ export function ProfilePage() {
             <h3 className="text-xl font-medium mb-4">経歴</h3>
             <div className="space-y-4">
               <div className="border-l-2 border-primary pl-4">
-                <h4 className="font-medium">シニア フロントエンドエンジニア</h4>
-                <p className="text-muted-foreground text-sm">株式会社テクノロジー • 2022年4月 - 現在</p>
-                <p className="text-sm mt-2">React/TypeScriptを使用したWebアプリケーションの設計・開発を担当。チームリードとして新人エンジニアの指導も行っています。</p>
+                <h4 className="font-medium">プログラマー</h4>
+                <p className="text-muted-foreground text-sm">株式会社レベルファイブ • 2022年4月 - 2024年8月</p>
+                <p className="text-sm mt-2">イナズマイレブン 英雄たちのヴィクトリーロードの開発。日本ゲーム大賞2023フューチャー賞受賞作品。</p>
               </div>
               <div className="border-l-2 border-muted pl-4">
-                <h4 className="font-medium">フロントエンドエンジニア</h4>
-                <p className="text-muted-foreground text-sm">株式会社ウェブソリューション • 2020年4月 - 2022年3月</p>
-                <p className="text-sm mt-2">Vue.js、Reactを使用したECサイトやコーポレートサイトの開発に従事。</p>
+                <h4 className="font-medium">独立・個人開発</h4>
+                <p className="text-muted-foreground text-sm">2024年9月 - 現在</p>
+                <p className="text-sm mt-2">LINE占いコンテンツ、Vtuberプロジェクト、モアイキャラクタービジネスなど多分野でのプロジェクトを推進。</p>
               </div>
               <div className="border-l-2 border-muted pl-4">
-                <h4 className="font-medium">Webデザイナー・コーダー</h4>
-                <p className="text-muted-foreground text-sm">フリーランス • 2019年4月 - 2020年3月</p>
-                <p className="text-sm mt-2">個人事業主として、小規模企業向けのWebサイト制作を手がけました。</p>
+                <h4 className="font-medium">神戸電子専門学校</h4>
+                <p className="text-muted-foreground text-sm">エンターテインメントソフト学科 • 2018年 - 2022年</p>
+                <p className="text-sm mt-2">チーム制作でリーダーを務め、アイディア賞など複数の受賞実績。Unity開発の基礎を習得。</p>
+              </div>
+              <div className="border-l-2 border-muted pl-4">
+                <h4 className="font-medium">演劇部 部長</h4>
+                <p className="text-muted-foreground text-sm">神戸龍谷高等学校 • 2015年 - 2017年</p>
+                <p className="text-sm mt-2">18人の部員を統率し、市大会優秀賞を受賞。チームマネジメントとメンタルケアの経験を積む。</p>
               </div>
             </div>
           </div>
@@ -93,7 +98,7 @@ export function ProfilePage() {
               <CardContent className="p-0 h-full">
                 <ImageWithFallback
                   src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face"
-                  alt="山田直央のプロフィール写真"
+                  alt="岡悟史のプロフィール写真"
                   className="w-full h-full object-cover"
                 />
               </CardContent>
@@ -129,7 +134,7 @@ export function ProfilePage() {
           <ScrollFloat 
               className="font-bold text-muted-foreground"
             >
-              YAMADA NAO
+              OKA SATOSHI
             </ScrollFloat>
           </div>
         </div>

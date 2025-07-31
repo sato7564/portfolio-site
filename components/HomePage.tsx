@@ -25,12 +25,12 @@ export function HomePage({ onPageChange }: HomePageProps) {
           </Badge>
           
           <h1 className="text-5xl md:text-7xl font-medium mb-6 bg-gradient-to-r from-primary via-primary to-secondary bg-clip-text text-transparent leading-tight">
-            フロントエンド<br />デベロッパー
+            ゲーム<br />プログラマー
           </h1>
           
           <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto leading-relaxed">
-            美しく、機能的で、ユーザーフレンドリーなWebアプリケーションを作成しています。
-            React、TypeScript、そして最新のWeb技術を使って、デジタル体験を向上させます。
+            「思い立ったら、すぐ形に」をモットーに、ゲーム開発からビジネスアプリケーションまで幅広く手がけています。
+            企画力・開発力・統率力をバランスよく活かして、ユーザーに喜ばれる体験を創造します。
           </p>
           
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
@@ -108,7 +108,7 @@ export function HomePage({ onPageChange }: HomePageProps) {
         <ScrollFloat 
           className="font-bold text-muted-foreground"
         >
-          YAMADA NAO
+          OKA SATOSHI
         </ScrollFloat>
       </div>
     </div>

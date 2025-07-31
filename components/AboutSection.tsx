@@ -10,7 +10,7 @@ export function AboutSection() {
             <h2 className="text-4xl font-medium mb-6">私について</h2>
             <div className="space-y-4 text-muted-foreground">
               <p>
-                こんにちは！山田直央です。5年以上の経験を持つフロントエンドデベロッパーとして、
+                こんにちは！岡悟史です。ゲームプログラマーとして約2年半の経験を持ち、
                 ユーザー中心の設計と最新技術を組み合わせて、魅力的なWebアプリケーションを作成しています。
               </p>
               <p>
@@ -29,7 +29,7 @@ export function AboutSection() {
               <CardContent className="p-0 h-full">
                 <ImageWithFallback
                   src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face"
-                  alt="山田直央のプロフィール写真"
+                  alt="岡悟史のプロフィール写真"
                   className="w-full h-full object-cover"
                 />
               </CardContent>

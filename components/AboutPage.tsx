@@ -7,7 +7,7 @@ export function AboutPage() {
       <div className="text-center mb-12">
         <h1 className="text-4xl font-medium mb-4">私について</h1>
         <p className="text-muted-foreground max-w-2xl mx-auto">
-          デザインとエンジニアリングの交差点で、価値あるプロダクトを生み出すことに情熱を注いでいます。
+          「思い立ったら、すぐ形に」をモットーに、ゲーム開発からビジネス領域まで幅広く挑戦しています。
         </p>
       </div>
       
@@ -19,9 +19,9 @@ export function AboutPage() {
           </CardHeader>
           <CardContent className="prose prose-gray max-w-none">
             <p className="text-muted-foreground leading-relaxed">
-              「美しさと機能性の両立」を常に追求しています。優れたデザインは見た目だけでなく、
-              使いやすさと性能を兼ね備えているべきだと考えています。細部にこだわり抜くことで、
-              ユーザーにとって本当に価値のある体験を創造することを目指しています。
+              「企画力・開発力・統率力の三位一体」を大切にしています。アイデアを形にするだけでなく、
+              チームを率いて品質の高いプロダクトを完成させることにこだわっています。
+              新しい技術やAIの活用も積極的に取り入れ、常に成長し続けることを心がけています。
             </p>
           </CardContent>
         </Card>
@@ -34,24 +34,24 @@ export function AboutPage() {
           <CardContent>
             <div className="space-y-4">
               <div>
-                <h3 className="font-medium mb-2">01. ユーザー中心設計</h3>
+                <h3 className="font-medium mb-2">01. チームファースト</h3>
                 <p className="text-muted-foreground">
-                  すべてのプロジェクトは、エンドユーザーのニーズから始まります。
-                  徹底的なリサーチと分析を通じて、真の課題を理解し、最適な解決策を提案します。
+                  個人の力ではなく、チーム全体の力を最大化することを大切にしています。
+                  メンバーの強みを見極め、適材適所の役割分担でプロジェクトを成功に導きます。
                 </p>
               </div>
               <div>
-                <h3 className="font-medium mb-2">02. イテレーティブな開発</h3>
+                <h3 className="font-medium mb-2">02. 継続的な改善</h3>
                 <p className="text-muted-foreground">
-                  完璧を求めすぎず、素早くプロトタイプを作成し、フィードバックを収集して改善を重ねます。
-                  この反復的なプロセスにより、より良い成果物を生み出します。
+                  完成したプロジェクトでも、常に改善の余地があると考えています。
+                  定期的な振り返りとフィードバックを通じて、より良いプロダクトへと育てていきます。
                 </p>
               </div>
               <div>
-                <h3 className="font-medium mb-2">03. 技術の適材適所</h3>
+                <h3 className="font-medium mb-2">03. 新技術の積極活用</h3>
                 <p className="text-muted-foreground">
-                  最新技術を追いかけるだけでなく、プロジェクトに最適な技術を選択します。
-                  シンプルさと保守性を重視し、長期的に価値を提供できるソリューションを構築します。
+                  AI技術や最新の開発ツールを積極的に取り入れ、開発効率の向上を図っています。
+                  伝統的な手法と新しいアプローチを組み合わせ、最適な解決策を提供します。
                 </p>
               </div>
             </div>
@@ -126,7 +126,7 @@ export function AboutPage() {
         <ScrollFloat 
             className="font-bold text-muted-foreground"
           >
-            YAMADA NAO
+            OKA SATOSHI
           </ScrollFloat>
         </div>
       </div>

@@ -37,7 +37,10 @@
       "Bash(uv venv:*)",
       "Bash(uv run:*)",
       "mcp__ide__getDiagnostics",
-      "Bash(npm run typecheck:*)"
+      "Bash(npm run typecheck:*)",
+      "Bash(dir:*)",
+      "Bash(del nul)",
+      "Bash(git reset:*)"
     ],
     "deny": []
   }
