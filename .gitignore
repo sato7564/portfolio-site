@@ -25,3 +25,7 @@ dist-ssr
 
 # Debug folder
 debug/
+
+# MCP Obsidian
+mcp-obsidian/
+.env
