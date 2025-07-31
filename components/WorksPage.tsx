@@ -276,21 +276,21 @@ export function WorksPage() {
                   )}
                 </div>
                 <div className="flex gap-2">
-                  {project.liveUrl && (
+                  {'liveUrl' in project && project.liveUrl ? (
                     <Button size="sm" className="flex-1 intellectual-gradient hover:opacity-90" asChild>
-                      <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
+                      <a href={project.liveUrl as string} target="_blank" rel="noopener noreferrer">
                         <ExternalLink className="w-3 h-3 mr-1" />
                         Demo
                       </a>
                     </Button>
-                  )}
-                  {project.githubUrl && (
+                  ) : null}
+                  {'githubUrl' in project && project.githubUrl ? (
                     <Button size="sm" variant="outline" className="border-intellectual hover:bg-secondary/20" asChild>
-                      <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
+                      <a href={project.githubUrl as string} target="_blank" rel="noopener noreferrer">
                         <Github className="w-3 h-3" />
                       </a>
                     </Button>
-                  )}
+                  ) : null}
                 </div>
               </CardContent>
             </Card>

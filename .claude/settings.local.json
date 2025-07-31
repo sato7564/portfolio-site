@@ -40,7 +40,8 @@
       "Bash(npm run typecheck:*)",
       "Bash(dir:*)",
       "Bash(del nul)",
-      "Bash(git reset:*)"
+      "Bash(git reset:*)",
+      "Bash(npm run build:*)"
     ],
     "deny": []
   }
