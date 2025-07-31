@@ -3,6 +3,7 @@ import { Badge } from "./ui/badge";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
 import ScrollFloat from "./ScrollFloatSimple";
 import Orb from "./Orb";
+import GlareHover from "./GlareHover";
 
 export function ProfilePage() {
   const skillCategories = [
@@ -75,15 +76,29 @@ export function ProfilePage() {
         </div>
         
         <div className="flex justify-center lg:justify-end">
-          <Card className="w-80 h-96 overflow-hidden">
-            <CardContent className="p-0 h-full">
-              <ImageWithFallback
-                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face"
-                alt="山田直央のプロフィール写真"
-                className="w-full h-full object-cover"
-              />
-            </CardContent>
-          </Card>
+          <GlareHover
+            width="320px"
+            height="384px"
+            background="transparent"
+            borderRadius="0.5rem"
+            borderColor="transparent"
+            glareColor="#ffffff"
+            glareOpacity={0.4}
+            glareAngle={-30}
+            glareSize={300}
+            transitionDuration={800}
+            playOnce={false}
+          >
+            <Card className="w-full h-full overflow-hidden">
+              <CardContent className="p-0 h-full">
+                <ImageWithFallback
+                  src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face"
+                  alt="山田直央のプロフィール写真"
+                  className="w-full h-full object-cover"
+                />
+              </CardContent>
+            </Card>
+          </GlareHover>
         </div>
       </div>
 
