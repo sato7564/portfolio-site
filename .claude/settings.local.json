@@ -18,7 +18,26 @@
       "Bash(mv:*)",
       "Bash(git push:*)",
       "Bash(npx jsrepo add:*)",
-      "WebFetch(domain:github.com)"
+      "WebFetch(domain:github.com)",
+      "Bash(cat:*)",
+      "Bash(cmd.exe:*)",
+      "WebFetch(domain:witty-naha-8507.greater.jp)",
+      "Bash(htpasswd:*)",
+      "WebFetch(domain:reactbits.dev)",
+      "Bash(dir C:Userssato7.ssh)",
+      "Bash(rsync:*)",
+      "Bash(pip install:*)",
+      "Bash(playwright install:*)",
+      "Bash(python:*)",
+      "Bash(del extract_rolling_gallery.py rolling_gallery_component.tsx)",
+      "WebFetch(domain:docs.anthropic.com)",
+      "WebFetch(domain:zenn.dev)",
+      "Bash(git clone:*)",
+      "Bash(uv pip install:*)",
+      "Bash(uv venv:*)",
+      "Bash(uv run:*)",
+      "mcp__ide__getDiagnostics",
+      "Bash(npm run typecheck:*)"
     ],
     "deny": []
   }

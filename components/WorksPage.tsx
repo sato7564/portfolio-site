@@ -13,6 +13,30 @@ export function WorksPage() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const projects = [
     {
+      title: "演劇サークル立ち上げ・舞台公演",
+      description: "専門学校で演劇サークルを創設し、18人で「沙羅双樹のハムレット」を上演。演劇初心者が多い中、スケジュール調整と演技指導を担当し、200人以上を動員する公演を実現。",
+      longDescription: "2021年夏、専門学校で演劇サークルを創設し、演劇経験者がほとんどいない18人のメンバーと共に「沙羅双樹のハムレット」を上演しました。プロジェクト管理スキルとリーダーシップを活かし、ゼロから組織を立ち上げ、成功裏に公演を実現。特に重視したのは、初心者への段階的な指導と、18人全員のスケジュール調整でした。",
+      image: "https://images.unsplash.com/photo-1503095396549-807759245b35?w=600&h=400&fit=crop",
+      images: [
+        "https://images.unsplash.com/photo-1503095396549-807759245b35?w=800&h=600&fit=crop",
+        "https://images.unsplash.com/photo-1507676184212-d03ab07a01bf?w=800&h=600&fit=crop",
+        "https://images.unsplash.com/photo-1516307365426-bea591f05011?w=800&h=600&fit=crop"
+      ],
+      tags: ["プロジェクト管理", "リーダーシップ", "チームビルディング", "演出", "スケジュール管理"],
+      category: "マネジメント",
+      year: "2021",
+      team: "18人",
+      featured: true,
+      features: [
+        "ゼロからの演劇サークル立ち上げと組織運営",
+        "18人のメンバーのスケジュール調整と稽古計画",
+        "演劇初心者15人への基礎演技指導",
+        "6ヶ月間のプロジェクト管理と公演実現",
+        "200人以上の観客動員を達成"
+      ],
+      techDetails: "この経験は、後の技術プロジェクトマネジメントの基礎となりました。多様なバックグラウンドを持つチームメンバーをまとめ、共通の目標に向かって導くスキル、限られたリソースでの創造的な問題解決、そして締切厳守のプレッシャー下でのパフォーマンス管理など、現在のソフトウェア開発にも直接活かされています。"
+    },
+    {
       title: "Eコマースダッシュボード",
       description: "React、TypeScript、Supabaseを使用した現代的なEコマース管理システム。売上分析、在庫管理、顧客管理機能を含む包括的なダッシュボード。リアルタイムでの在庫更新や売上レポートの自動生成機能により、効率的な店舗運営をサポートします。",
       longDescription: "このEコマースダッシュボードは、中小規模のオンラインストアオーナー向けに開発された包括的な管理システムです。React 18とTypeScriptを使用し、型安全性と保守性を確保しています。バックエンドにはSupabaseを採用し、リアルタイムデータベース機能により在庫の即時更新を実現。Chart.jsを活用した視覚的な売上分析機能では、日別・月別・商品カテゴリ別の売上推移を直感的に把握できます。",
@@ -270,17 +294,21 @@ export function WorksPage() {
                   )}
                 </div>
                 <div className="flex gap-2">
-                  <Button size="sm" className="flex-1 intellectual-gradient hover:opacity-90" asChild>
-                    <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
-                      <ExternalLink className="w-3 h-3 mr-1" />
-                      Demo
-                    </a>
-                  </Button>
-                  <Button size="sm" variant="outline" className="border-intellectual hover:bg-secondary/20" asChild>
-                    <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
-                      <Github className="w-3 h-3" />
-                    </a>
-                  </Button>
+                  {project.liveUrl && (
+                    <Button size="sm" className="flex-1 intellectual-gradient hover:opacity-90" asChild>
+                      <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
+                        <ExternalLink className="w-3 h-3 mr-1" />
+                        Demo
+                      </a>
+                    </Button>
+                  )}
+                  {project.githubUrl && (
+                    <Button size="sm" variant="outline" className="border-intellectual hover:bg-secondary/20" asChild>
+                      <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
+                        <Github className="w-3 h-3" />
+                      </a>
+                    </Button>
+                  )}
                 </div>
               </CardContent>
             </Card>

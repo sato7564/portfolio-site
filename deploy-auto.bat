@@ -25,5 +25,5 @@ echo   - Uploading assets folder...
 scp -o StrictHostKeyChecking=no -i C:\Users\sato7\.ssh\id_rsa_lolipop_nopass -P 2222 -r dist\assets greater.jp-witty-naha-8507@ssh.lolipop.jp:~/web/
 
 echo ✅ Deployment completed!
-echo 🌐 Check your site at: https://greater.jp/
+echo 🌐 Check your site at: https://witty-naha-8507.greater.jp/
 pause

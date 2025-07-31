@@ -7,6 +7,13 @@ import { ImageWithFallback } from "./figma/ImageWithFallback";
 export function ProjectsSection() {
   const projects = [
     {
+      title: "演劇サークル立ち上げ・舞台公演",
+      description: "専門学校で演劇サークルを創設し、18人で「沙羅双樹のハムレット」を上演。演劇初心者が多い中、スケジュール調整と演技指導を担当し、200人以上を動員する公演を実現。",
+      image: "https://images.unsplash.com/photo-1503095396549-807759245b35?w=600&h=400&fit=crop",
+      tags: ["プロジェクト管理", "リーダーシップ", "チームビルディング", "演出"],
+      featured: true
+    },
+    {
       title: "Eコマースダッシュボード",
       description: "React、TypeScript、Supabaseを使用した現代的なEコマース管理システム。売上分析、在庫管理、顧客管理機能を含む包括的なダッシュボード。",
       image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop",
@@ -45,7 +52,7 @@ export function ProjectsSection() {
         
         <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-8">
           {projects.map((project, index) => (
-            <Card key={index} className="overflow-hidden group hover:shadow-lg transition-all duration-300">
+            <Card key={index} className={`overflow-hidden group hover:shadow-lg transition-all duration-300 ${project.featured ? 'border-primary' : ''}`}>
               <div className="aspect-video overflow-hidden">
                 <ImageWithFallback
                   src={project.image}
@@ -54,7 +61,14 @@ export function ProjectsSection() {
                 />
               </div>
               <CardHeader>
-                <CardTitle>{project.title}</CardTitle>
+                <div className="flex items-start justify-between">
+                  <CardTitle className="flex-1">{project.title}</CardTitle>
+                  {project.featured && (
+                    <Badge className="ml-2 bg-primary text-primary-foreground">
+                      Featured
+                    </Badge>
+                  )}
+                </div>
                 <CardDescription>{project.description}</CardDescription>
               </CardHeader>
               <CardContent>
@@ -66,18 +80,22 @@ export function ProjectsSection() {
                   ))}
                 </div>
                 <div className="flex gap-2">
-                  <Button size="sm" asChild>
-                    <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
-                      <ExternalLink className="w-4 h-4 mr-1" />
-                      Live Demo
-                    </a>
-                  </Button>
-                  <Button size="sm" variant="outline" asChild>
-                    <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
-                      <Github className="w-4 h-4 mr-1" />
-                      GitHub
-                    </a>
-                  </Button>
+                  {project.liveUrl && (
+                    <Button size="sm" asChild>
+                      <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
+                        <ExternalLink className="w-4 h-4 mr-1" />
+                        Live Demo
+                      </a>
+                    </Button>
+                  )}
+                  {project.githubUrl && (
+                    <Button size="sm" variant="outline" asChild>
+                      <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
+                        <Github className="w-4 h-4 mr-1" />
+                        GitHub
+                      </a>
+                    </Button>
+                  )}
                 </div>
               </CardContent>
             </Card>
