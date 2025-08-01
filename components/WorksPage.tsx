@@ -15,14 +15,13 @@ export function WorksPage() {
   const baseProjects = [
     {
       title: "イナズマイレブン - サッカーシステム開発",
-      description: "子供の頃から憧れていた『イナズマイレブン』の商業ゲーム開発に参加。サッカーシステムとツール開発を担当し、エンドクレジットに名前が掲載される貴重な経験を積む。",
-      longDescription: "子供の頃から好きだったタイトルである『イナズマイレブン』の開発に携わる貴重な機会を得て、主にサッカーシステムとツール開発を担当しました。商業ゲーム開発の現場で実際のプロダクトに貢献し、熟練エンジニアとの協働により「仕事としての開発」を学ぶ貴重な経験となりました。会社規模のプロジェクトでの分業体制や品質基準への適応を通じて、商業レベルの開発プロセスを習得しています。",
+      description: "子供の頃から好きだった『イナズマイレブン』のゲーム開発に参加。サッカーシステムとツール開発を担当し、エンドクレジットに名前が掲載される貴重な経験を積む。",
+      longDescription: "子供の頃から好きだったタイトルである『イナズマイレブン』の開発に携わる貴重な機会を得て、主にサッカーシステムとツール開発を担当しました。ゲーム開発の現場で実際のプロダクトに貢献し、熟練エンジニアとの協働により「仕事としての開発」を学ぶ貴重な経験となりました。会社規模のプロジェクトでの分業体制や品質基準への適応を通じて、プログラマとしてのスキルが底上げされました。",
       image: getProjectImage("イナズマイレブン - サッカーシステム開発"),
       images: getProjectScreenshots("イナズマイレブン - サッカーシステム開発"),
-      tags: ["Unity", "C#", "商業ゲーム開発", "サッカーシステム", "ツール開発", "チーム開発"],
-      category: "商業ゲーム開発",
-      year: "商業プロジェクト参加",
-      team: "商業プロジェクト",
+      tags: ["C++", "商業ゲーム開発", "サッカーシステム", "ツール開発", "チーム開発"],
+      category: "ゲーム開発",
+      team: "大規模プロジェクト",
       featured: true,
       role: "サッカーシステム・ツール開発",
       status: "開発参加（未発売）",
@@ -31,7 +30,7 @@ export function WorksPage() {
         "ゲームの核となるサッカーシステムの実装と調整",
         "開発効率向上のための専用ツール制作",
         "商業開発プロセスと品質基準への適応",
-        "熟練エンジニアとのコードレビュー・設計レビュー参加",
+        "熟練エンジニアのコードレビュー",
         "会社規模プロジェクトでの分業体制習得",
         "エンドクレジットへの正式な開発者としての掲載",
         "幼少期の憧れ作品への実際の貢献"
@@ -41,25 +40,24 @@ export function WorksPage() {
     {
       title: "ポートフォリオサイト開発",
       description: "Claude Codeを活用した5日間の超高速開発。Obsidian情報アーキテクチャとAI協働ワークフローを確立し、フルスタック開発でのAI活用可能性を実証。",
-      longDescription: "Claude Codeを活用して5日間で開発した現在のポートフォリオサイトです。Obsidianによる情報アーキテクチャ構築から、React・TypeScriptによるフロントエンド実装まで、AI協働による超高速開発ワークフローを実践。従来の開発手法では数週間を要するプロジェクトを、AI支援により短期間で高品質に完成させ、フルスタック開発におけるAI活用の可能性を実証しました。",
+      longDescription: "Claude Codeを活用して5日間で開発した現在のポートフォリオサイトです。Obsidianによる情報アーキテクチャ構築から、React・TypeScriptによるフロントエンド実装まで、AI協働による超高速開発ワークフローを実践。AI支援により短期間で高品質に完成させ、フルスタック開発におけるAI活用の可能性を実証しました。",
       image: getProjectImage("ポートフォリオサイト開発"),
       images: getProjectScreenshots("ポートフォリオサイト開発"),
-      tags: ["React", "Claude Code", "AI協働開発", "Obsidian", "超高速開発", "TypeScript"],
+      tags: ["React", "Claude Code", "AI協働開発", "Obsidian", "超高速開発", "Github"],
       category: "Web開発",
       year: "2025年7月",
-      team: "1人（AI協働）",
+      team: "1人",
       duration: "5日間",
       featured: true,
       features: [
         "Claude CodeによるAI協働開発の実践",
         "Obsidian情報アーキテクチャとの統合",
-        "React・TypeScriptによるモダンフロントエンド",
         "レスポンシブデザインとアニメーション実装",
         "5日間での完全なサイト構築",
         "AI活用による開発効率化の実証",
         "継続的な機能追加・改善"
       ],
-      techDetails: "Claude Codeを戦略的に活用し、設計・実装・デバッグ・デプロイまで一貫したAI協働開発を実現。Obsidianのナレッジベースと連携することで、情報管理から実装まで効率化され、従来手法では不可能な開発速度と品質を両立させました。"
+      techDetails: "Claude Codeを戦略的に活用し、設計・実装・デバッグ・デプロイまで一貫したAI協働開発を実現。Obsidianのナレッジベースと連携することで、情報管理から実装まで効率化させました。"
     },
     {
       title: "共同ゲーム開発プロジェクト",
@@ -67,14 +65,14 @@ export function WorksPage() {
       longDescription: "2025年5月から開始したプロのデザイナーとの協働ゲーム開発プロジェクトです。レトロポップなデザインテイストの自転車アクションゲームを制作中。デザイナーとプログラマーの効果的な協働体制を確立し、品質重視の開発プロセスを実践。Unityアーキテクチャの深い理解、デバッグ手法の習得、状態遷移パターンの学習など、技術的成長も重視したプロジェクト運営を行っています。",
       image: getProjectImage("共同ゲーム開発プロジェクト"),
       images: getProjectScreenshots("共同ゲーム開発プロジェクト"),
-      tags: ["Unity", "C#", "デザイナー協働", "アーキテクチャ学習", "状態遷移", "レトロポップ"],
+      tags: ["Unity", "C#", "デザイナー協働", "アーキテクチャ学習", "状態遷移"],
       category: "ゲーム開発",
       year: "2025年5月〜現在",
       team: "2人（プログラマー・デザイナー）",
       featured: false,
       status: "開発中",
       features: [
-        "プロデザイナーとの効果的な協働開発体制",
+        "デザイナーとの効果的な協働開発体制",
         "レトロポップなデザインテイストのゲーム制作",
         "Unityアーキテクチャの深い理解と実践",
         "デバッグ手法・状態遷移パターンの習得",
@@ -85,9 +83,9 @@ export function WorksPage() {
       techDetails: "異なる専門性を持つメンバーとの協働により、より洗練されたゲーム体験の実現を目指しています。技術的な学習も重視し、長期的なスキル向上を図りながらプロジェクトを進行しています。"
     },
     {
-      title: "販売支援分析ダッシュボード",
-      description: "現在Sunglobe社で開発中の包括的なデータ分析システム。SQL、Python、Google Cloudを活用し、データ収集から可視化まで一気通貫で設計・実装。売上データ分析とビジネス改善提案を実現。",
-      longDescription: "システムエンジニアとして担当している、企業の販売データを分析・可視化するダッシュボードシステムです。BigQueryを活用したデータパイプライン構築、Python による自動化処理、Looker Studio でのダッシュボード設計まで、エンドツーエンドでシステム全体を担当。「マニュアル不要」を目指した直感的なUI設計により、非エンジニアでも簡単に使える仕組みを実現しています。",
+      title: "スタッフ稼働量の分析ダッシュボード",
+      description: "データ分析システム。SQL、Python、Google Cloudを活用し、データ収集から可視化まで一気通貫で設計・実装。売上データ分析とビジネス改善提案",
+      longDescription: "システムエンジニアとして担当している、企業の販売データを分析・可視化するダッシュボードシステムです。BigQueryを活用したデータパイプライン構築、Python による自動化処理、Looker Studio でのダッシュボード設計まで、エンドツーエンドでシステム全体を担当。「マニュアル不要」を目指した直感的なUI設計により、非エンジニアでも簡単に使える仕組みを実現しています。\n\n実際のダッシュボード：https://lookerstudio.google.com/u/0/reporting/b4252b31-16b1-4792-aeb1-6f08188da62f/page/p_o0botmnsud",
       image: getProjectImage("業務解析ダッシュボード開発"),
       images: getProjectScreenshots("業務解析ダッシュボード開発"),
       tags: ["SQL", "Python", "Google Cloud", "Looker Studio", "BigQuery", "データ分析", "業務自動化"],
@@ -95,6 +93,7 @@ export function WorksPage() {
       year: "2025年2月〜現在",
       team: "1人（単独担当）",
       featured: true,
+      liveUrl: "https://lookerstudio.google.com/u/0/reporting/b4252b31-16b1-4792-aeb1-6f08188da62f/page/p_o0botmnsud",
       status: "進行中",
       type: "業務開発",
       features: [
@@ -453,18 +452,11 @@ export function WorksPage() {
                   )}
                 </div>
                 <div className="flex gap-2">
-                  {'liveUrl' in project && project.liveUrl ? (
+                  {project.title === "スタッフ稼働量の分析ダッシュボード" && 'liveUrl' in project && project.liveUrl ? (
                     <Button size="sm" className="flex-1 intellectual-gradient hover:opacity-90" asChild>
                       <a href={project.liveUrl as string} target="_blank" rel="noopener noreferrer">
                         <ExternalLink className="w-3 h-3 mr-1" />
                         Demo
-                      </a>
-                    </Button>
-                  ) : null}
-                  {'githubUrl' in project && project.githubUrl ? (
-                    <Button size="sm" variant="outline" className="border-intellectual hover:bg-secondary/20" asChild>
-                      <a href={project.githubUrl as string} target="_blank" rel="noopener noreferrer">
-                        <Github className="w-3 h-3" />
                       </a>
                     </Button>
                   ) : null}

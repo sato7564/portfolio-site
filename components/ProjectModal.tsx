@@ -121,20 +121,16 @@ export function ProjectModal({ project, isOpen, onClose }: ProjectModalProps) {
           </div>
 
           {/* アクションボタン */}
-          <div className="flex gap-3 pt-4">
-            <Button className="intellectual-gradient hover:opacity-90" asChild>
-              <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
-                <ExternalLink className="w-4 h-4 mr-2" />
-                Live Demo
-              </a>
-            </Button>
-            <Button variant="outline" className="border-intellectual hover:bg-secondary/20" asChild>
-              <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
-                <Github className="w-4 h-4 mr-2" />
-                GitHub
-              </a>
-            </Button>
-          </div>
+          {project.title === "スタッフ稼働量の分析ダッシュボード" && project.liveUrl && (
+            <div className="flex gap-3 pt-4">
+              <Button className="intellectual-gradient hover:opacity-90" asChild>
+                <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
+                  <ExternalLink className="w-4 h-4 mr-2" />
+                  Live Demo
+                </a>
+              </Button>
+            </div>
+          )}
         </div>
       </DialogContent>
     </Dialog>
