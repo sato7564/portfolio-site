@@ -434,6 +434,10 @@ export function WorksPage() {
                 <CardDescription className="text-sm leading-relaxed line-clamp-3">
                   {project.description}
                 </CardDescription>
+                <div className="mt-2 text-xs text-primary/70 hover:text-primary transition-colors flex items-center gap-1">
+                  <span>続きを読む</span>
+                  <ExternalLink className="w-3 h-3" />
+                </div>
               </CardHeader>
               <CardContent>
                 <div className="flex flex-wrap gap-1 mb-4">
