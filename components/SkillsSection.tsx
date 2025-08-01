@@ -4,16 +4,28 @@ import { Badge } from "./ui/badge";
 export function SkillsSection() {
   const skillCategories = [
     {
-      title: "フロントエンド",
-      skills: ["React", "TypeScript", "Next.js", "Tailwind CSS", "Framer Motion", "Zustand"]
+      title: "システム開発・データ分析",
+      skills: ["SQL", "Python", "Google Cloud", "Looker Studio", "BigQuery", "データパイプライン", "業務自動化", "VBA"]
     },
     {
-      title: "バックエンド",
-      skills: ["Node.js", "Express", "PostgreSQL", "Supabase", "Prisma", "REST API"]
+      title: "ゲーム開発・プログラミング",
+      skills: ["C++", "Unity", "C#", "DirectX 11", "メモリ管理", "A*アルゴリズム", "マルチプレイ", "ゲームエンジン"]
     },
     {
-      title: "ツール & その他",
-      skills: ["Git", "Docker", "Figma", "Jest", "Cypress", "Vercel"]
+      title: "Web・モダン技術",
+      skills: ["React", "TypeScript", "JavaScript", "LINE API", "Tailwind CSS", "Obsidian", "Git", "フルスタック開発"]
+    },
+    {
+      title: "AI・最新技術活用",
+      skills: ["ChatGPT活用", "AI画像生成", "Live2D", "AI音声変換", "Claude Code", "効率化", "学習加速", "プロンプトエンジニアリング"]
+    },
+    {
+      title: "リーダーシップ・マネジメント",
+      skills: ["チームリーダー", "プロジェクト管理", "Trello", "Slack", "メンタルケア", "20人以上統率", "演出・指導", "コミュニケーション"]
+    },
+    {
+      title: "クリエイティブ・ビジネス",
+      skills: ["キャラクターデザイン", "LINEスタンプ", "SNSマーケティング", "4コマ漫画", "Vtuber制作", "受託開発", "商用品質", "ユーザー中心設計"]
     }
   ];
 
@@ -21,13 +33,14 @@ export function SkillsSection() {
     <section id="skills" className="py-20 px-4 bg-muted/30">
       <div className="container mx-auto">
         <div className="text-center mb-12">
-          <h2 className="text-4xl font-medium mb-4">スキル & 技術</h2>
+          <h2 className="text-4xl font-medium mb-4">スキル & 専門領域</h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            幅広い技術スタックを使用して、スケーラブルで保守性の高いアプリケーションを構築しています。
+            ゲーム開発から現在のビジネスシステム開発まで、技術・マネジメント・クリエイティブを
+            横断する多様なスキルセットで価値創造に取り組んでいます。
           </p>
         </div>
         
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-8">
           {skillCategories.map((category, index) => (
             <Card key={index} className="h-full">
               <CardHeader>

@@ -7,7 +7,9 @@ export function AboutPage() {
       <div className="text-center mb-12">
         <h1 className="text-4xl font-medium mb-4">僕について</h1>
         <p className="text-muted-foreground max-w-2xl mx-auto">
-          「思い立ったら、すぐ形に」をモットーに、ゲーム開発からビジネス領域まで幅広く挑戦しています。
+          技術力とコミュニケーション力を両立し、ゲーム業界での実務経験を活かして
+          システム開発・データ分析の分野で価値創造に取り組んでいます。
+          AI活用による効率化と、ユーザー中心設計を重視したシステム構築が得意です。
         </p>
       </div>
       
@@ -19,9 +21,10 @@ export function AboutPage() {
           </CardHeader>
           <CardContent className="prose prose-gray max-w-none">
             <p className="text-muted-foreground leading-relaxed">
-              「企画力・開発力・統率力の三位一体」を大切にしています。アイデアを形にするだけでなく、
-              チームを率いて品質の高いプロダクトを完成させることにこだわっています。
-              新しい技術やAIの活用も積極的に取り入れ、常に成長し続けることを心がけています。
+              「技術×コミュニケーション×継続的改善」を軸に、システム全体を俯瞰した価値創造を重視しています。
+              単なる機能実装に留まらず、ユーザーが直感的に使える「マニュアル不要」な設計と、
+              チーム全体の生産性向上を実現することにこだわっています。
+              最新のAI技術を積極的に活用し、開発効率と品質の両立を追求しています。
             </p>
           </CardContent>
         </Card>
@@ -34,24 +37,24 @@ export function AboutPage() {
           <CardContent>
             <div className="space-y-4">
               <div>
-                <h3 className="font-medium mb-2">01. チームファースト</h3>
+                <h3 className="font-medium mb-2">01. ユーザー中心設計</h3>
                 <p className="text-muted-foreground">
-                  個人の力ではなく、チーム全体の力を最大化することを大切にしています。
-                  メンバーの強みを見極め、適材適所の役割分担でプロジェクトを成功に導きます。
+                  「マニュアル不要」を目指した直感的なシステム設計を重視しています。
+                  エンドユーザーの視点に立ち、使いやすさと機能性を両立したソリューションを提供します。
                 </p>
               </div>
               <div>
-                <h3 className="font-medium mb-2">02. 継続的な改善</h3>
+                <h3 className="font-medium mb-2">02. データドリブンな意思決定</h3>
                 <p className="text-muted-foreground">
-                  完成したプロジェクトでも、常に改善の余地があると考えています。
-                  定期的な振り返りとフィードバックを通じて、より良いプロダクトへと育てていきます。
+                  売上データ分析から業務改善提案まで、データに基づいた論理的なアプローチを実践。
+                  SQL、Python、Google Cloudを活用した包括的なデータパイプラインを構築しています。
                 </p>
               </div>
               <div>
-                <h3 className="font-medium mb-2">03. 新技術の積極活用</h3>
+                <h3 className="font-medium mb-2">03. AI活用による生産性革命</h3>
                 <p className="text-muted-foreground">
-                  AI技術や最新の開発ツールを積極的に取り入れ、開発効率の向上を図っています。
-                  伝統的な手法と新しいアプローチを組み合わせ、最適な解決策を提供します。
+                  ChatGPTを活用した未経験技術の習得加速、開発効率化を実践。
+                  従来の学習・開発手法にAI支援を統合し、短期間での高品質なシステム構築を実現します。
                 </p>
               </div>
             </div>
@@ -67,34 +70,34 @@ export function AboutPage() {
             <div className="grid md:grid-cols-2 gap-6">
               <div>
                 <h3 className="font-medium mb-2 flex items-center">
-                  <span className="text-primary mr-2">●</span>透明性
+                  <span className="text-primary mr-2">●</span>前向きな姿勢
                 </h3>
                 <p className="text-muted-foreground text-sm">
-                  オープンなコミュニケーションを心がけ、プロジェクトの進捗や課題を率直に共有します。
+                  困難な状況でも笑顔とポジティブな姿勢を維持し、チーム全体の士気向上に貢献します。
                 </p>
               </div>
               <div>
                 <h3 className="font-medium mb-2 flex items-center">
-                  <span className="text-primary mr-2">●</span>継続的学習
+                  <span className="text-primary mr-2">●</span>情報収集・分析力
                 </h3>
                 <p className="text-muted-foreground text-sm">
-                  技術の進化に対応し続けるため、常に新しい知識を吸収し、スキルを磨いています。
+                  IT業界の最新動向をキャッチアップし、データに基づいた論理的な判断を行います。
                 </p>
               </div>
               <div>
                 <h3 className="font-medium mb-2 flex items-center">
-                  <span className="text-primary mr-2">●</span>品質へのこだわり
+                  <span className="text-primary mr-2">●</span>効率化への取り組み
                 </h3>
                 <p className="text-muted-foreground text-sm">
-                  妥協せず、細部まで丁寧に作り込むことで、長く愛されるプロダクトを目指します。
+                  Python、VBA、AIツールを活用した業務自動化で、チーム全体の生産性向上を実現します。
                 </p>
               </div>
               <div>
                 <h3 className="font-medium mb-2 flex items-center">
-                  <span className="text-primary mr-2">●</span>チームワーク
+                  <span className="text-primary mr-2">●</span>メンタルケア
                 </h3>
                 <p className="text-muted-foreground text-sm">
-                  個人の力だけでなく、チーム全体の力を引き出すことで、より大きな成果を生み出します。
+                  演劇部部長経験に基づく、メンバーの状況察知と適切なサポートでチーム結束を強化します。
                 </p>
               </div>
             </div>
@@ -108,13 +111,13 @@ export function AboutPage() {
           </CardHeader>
           <CardContent>
             <p className="text-muted-foreground leading-relaxed">
-              テクノロジーを通じて、人々の生活をより豊かで便利にすることが私の使命です。
-              単なる機能的なソリューションではなく、使う人の心に響き、日々の生活に溶け込む
-              プロダクトを創造し続けたいと考えています。
+              システム開発を通じて、ユーザーと組織の両方に価値を提供することが私の使命です。
+              技術的な専門性と高いコミュニケーション能力を活かし、複雑な課題をシンプルで使いやすい
+              ソリューションに変換することで、ビジネスの成長と効率化に貢献したいと考えています。
             </p>
             <p className="text-muted-foreground leading-relaxed mt-4">
-              これからも、デザインとエンジニアリングの境界を越えて、
-              新しい価値を生み出すことに挑戦し続けます。
+              今後は、データ分析とAI活用の専門性をさらに深め、
+              技術とビジネスを繋ぐ架け橋として、新しい価値創造に挑戦し続けます。
             </p>
           </CardContent>
         </Card>

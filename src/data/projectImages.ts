@@ -218,6 +218,16 @@ export const projectImages: {
     ],
     video: null
   },
+  "ポートフォリオサイト開発": {
+    thumbnail: "/images/projects/portfolio/ポートフォリオサイト.png",
+    screenshots: [
+      {
+        url: "/images/projects/portfolio/ポートフォリオサイト.png",
+        caption: "ポートフォリオサイト完成版"
+      }
+    ],
+    video: null
+  },
   "音楽制作活動": {
     thumbnail: "https://img.youtube.com/vi/R3bcNZKux9Q/hqdefault.jpg",
     screenshots: [],
