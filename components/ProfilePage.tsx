@@ -97,7 +97,7 @@ export function ProfilePage() {
             <Card className="w-full h-full overflow-hidden">
               <CardContent className="p-0 h-full">
                 <ImageWithFallback
-                  src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face"
+                  src="/images/profile.png"
                   alt="岡悟史のプロフィール写真"
                   className="w-full h-full object-cover"
                 />

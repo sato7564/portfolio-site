@@ -66,7 +66,7 @@ const RollingGallery: React.FC<RollingGalleryProps> = ({
     controls.start({
       rotateY: [startAngle, startAngle - 360],
       transition: {
-        duration: 20,
+        duration: 320,
         ease: "linear",
         repeat: Infinity,
       },
@@ -116,7 +116,7 @@ const RollingGallery: React.FC<RollingGalleryProps> = ({
   };
 
   return (
-    <div className="relative h-[200px] sm:h-[360px] w-full overflow-hidden">
+    <div className="relative h-[180px] sm:h-[320px] w-full overflow-hidden">
       <div
         className="absolute top-0 left-0 h-full w-[48px] z-10"
         style={{
@@ -148,7 +148,7 @@ const RollingGallery: React.FC<RollingGalleryProps> = ({
             width: cylinderWidth,
             transformStyle: "preserve-3d",
           }}
-          className="flex min-h-[150px] sm:min-h-[280px] cursor-grab items-center justify-center [transform-style:preserve-3d]"
+          className="flex h-full cursor-grab items-center justify-center [transform-style:preserve-3d]"
         >
           {galleryImages.map((url, i) => (
             <div
@@ -160,13 +160,18 @@ const RollingGallery: React.FC<RollingGalleryProps> = ({
                   }deg) translateZ(${radius}px)`,
               }}
             >
-              <img
-                src={url}
-                alt="gallery"
-                className="h-[120px] w-[180px] sm:h-[280px] sm:w-[420px] rounded-[6px] sm:rounded-[10px] border-[1px] sm:border-[2px] border-white object-cover
-                           transition-transform duration-300 ease-out group-hover:scale-105 cursor-pointer"
+              <div
+                className="h-[150px] w-[150px] sm:h-[280px] sm:w-[280px] rounded-[16px] sm:rounded-[24px] border-[1px] sm:border-[2px] border-white
+                           transition-transform duration-300 ease-out group-hover:scale-105 cursor-pointer overflow-hidden flex items-center justify-center"
+                style={{ backgroundColor: '#FFFEF5' }}
                 onClick={() => onImageClick && onImageClick(i)}
-              />
+              >
+                <img
+                  src={url}
+                  alt="gallery"
+                  className="max-h-full max-w-full object-contain"
+                />
+              </div>
             </div>
           ))}
         </motion.div>

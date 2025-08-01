@@ -48,14 +48,34 @@ export function MediaCarousel({
   videoThumbnail,
   aspectRatio = 16 / 9,
 }: MediaCarouselProps) {
+  // YouTube動画のIDを抽出する関数
+  const extractYouTubeId = (url: string): string | null => {
+    const match = url.match(/(?:youtube\.com\/watch\?v=|youtu\.be\/|youtube\.com\/shorts\/)([^&\n?#]+)/);
+    return match ? match[1] : null;
+  };
+
   // メディアアイテムを統合
   const mediaItems: MediaItem[] = [
-    ...images.map(src => ({ type: 'image' as const, src })),
+    ...images.map(src => {
+      // YouTube動画のサムネイルかチェック
+      const youtubeIdMatch = src.match(/img\.youtube\.com\/vi\/([^\/]+)/);
+      if (youtubeIdMatch) {
+        const videoId = youtubeIdMatch[1];
+        // Shortsかどうかをチェック（サムネイルURLからは判断できないので、通常の動画として扱う）
+        return {
+          type: 'video' as const,
+          src: `https://www.youtube.com/watch?v=${videoId}`,
+          thumbnail: src,
+          videoId: videoId
+        };
+      }
+      return { type: 'image' as const, src };
+    }),
     ...(videoUrl && videoThumbnail ? [{
       type: 'video' as const,
       src: videoUrl,
       thumbnail: videoThumbnail,
-      videoId: videoUrl.split('v=')[1]
+      videoId: extractYouTubeId(videoUrl) || undefined
     }] : [])
   ];
 
@@ -126,7 +146,7 @@ export function MediaCarousel({
     <div className="relative w-full">
       <div
         ref={containerRef}
-        className="relative overflow-hidden rounded-lg bg-muted/20"
+        className="relative overflow-hidden rounded-lg bg-gray-100"
         style={{
           aspectRatio: `${aspectRatio}`,
         }}
@@ -174,7 +194,7 @@ export function MediaCarousel({
                   <motion.img
                     src={currentItem.thumbnail}
                     alt="Video thumbnail"
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-contain"
                     draggable={false}
                     initial={{ filter: "blur(10px)" }}
                     animate={{ filter: "blur(0px)" }}
@@ -198,7 +218,7 @@ export function MediaCarousel({
                 <motion.img
                   src={currentItem.src}
                   alt={`Gallery image ${currentIndex + 1}`}
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-contain"
                   draggable={false}
                   initial={{ filter: "blur(10px)" }}
                   animate={{ filter: "blur(0px)" }}

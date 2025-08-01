@@ -12,6 +12,8 @@ interface ProjectModalProps {
     images?: string[];
     videoUrl?: string;
     videoThumbnail?: string;
+    video?: { url: string; thumbnail: string } | null;
+    videos?: { url: string; thumbnail: string }[];
     tags: string[];
     liveUrl: string;
     githubUrl: string;
@@ -28,7 +30,11 @@ interface ProjectModalProps {
 export function ProjectModal({ project, isOpen, onClose }: ProjectModalProps) {
   if (!project) return null;
 
-  const hasMedia = (project.images && project.images.length > 0) || (project.videoUrl && project.videoThumbnail);
+  const hasMedia = 
+    (project.images && project.images.length > 0) || 
+    (project.videoUrl && project.videoThumbnail) ||
+    (project.video) ||
+    (project.videos && project.videos.length > 0);
 
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
@@ -56,9 +62,16 @@ export function ProjectModal({ project, isOpen, onClose }: ProjectModalProps) {
         {hasMedia && (
           <div className="mb-6">
             <MediaCarousel
-              images={project.images}
-              videoUrl={project.videoUrl}
-              videoThumbnail={project.videoThumbnail}
+              images={
+                project.videos && project.videos.length > 0
+                  ? [
+                      ...(project.images || []),
+                      ...project.videos.map(v => v.thumbnail)
+                    ]
+                  : project.images || []
+              }
+              videoUrl={project.video?.url || project.videoUrl}
+              videoThumbnail={project.video?.thumbnail || project.videoThumbnail}
               aspectRatio={16 / 9}
             />
           </div>
