@@ -70,7 +70,7 @@ export const projectImages: {
       url: "https://www.youtube.com/watch?v=kFCVxULzJsY",
       thumbnail: "https://img.youtube.com/vi/kFCVxULzJsY/hqdefault.jpg"
     },
-    videos: null
+    videos: undefined
   },
   "LINE占いコンテンツ開発": {
     thumbnail: "/images/projects/line-fortune/LINE_おみくじ.jpg",
