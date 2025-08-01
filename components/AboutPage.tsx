@@ -5,7 +5,7 @@ export function AboutPage() {
   return (
     <div className="container mx-auto px-4 py-20 pb-40">
       <div className="text-center mb-12">
-        <h1 className="text-4xl font-medium mb-4">私について</h1>
+        <h1 className="text-4xl font-medium mb-4">僕について</h1>
         <p className="text-muted-foreground max-w-2xl mx-auto">
           「思い立ったら、すぐ形に」をモットーに、ゲーム開発からビジネス領域まで幅広く挑戦しています。
         </p>

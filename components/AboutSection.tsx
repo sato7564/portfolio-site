@@ -7,7 +7,7 @@ export function AboutSection() {
       <div className="container mx-auto">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div>
-            <h2 className="text-4xl font-medium mb-6">私について</h2>
+            <h2 className="text-4xl font-medium mb-6">僕について</h2>
             <div className="space-y-4 text-muted-foreground">
               <p>
                 こんにちは！岡悟史です。ゲームプログラマーとして約2年半の経験を持ち、
