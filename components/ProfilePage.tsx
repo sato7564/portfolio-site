@@ -94,15 +94,13 @@ export function ProfilePage() {
             transitionDuration={800}
             playOnce={false}
           >
-            <Card className="w-full h-full overflow-hidden">
-              <CardContent className="p-0 h-full">
-                <ImageWithFallback
-                  src="/images/profile.png"
-                  alt="岡悟史のプロフィール写真"
-                  className="w-full h-full object-cover"
-                />
-              </CardContent>
-            </Card>
+            <div className="w-full h-full flex items-center justify-center">
+              <ImageWithFallback
+                src="/images/profile.png"
+                alt="岡悟史のプロフィール写真"
+                className="max-w-full max-h-full object-contain rounded-lg"
+              />
+            </div>
           </GlareHover>
         </div>
       </div>
