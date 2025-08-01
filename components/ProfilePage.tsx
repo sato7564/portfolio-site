@@ -8,16 +8,16 @@ import GlareHover from "./GlareHover";
 export function ProfilePage() {
   const skillCategories = [
     {
-      title: "ゲーム開発",
-      skills: ["Unity", "C#", "DirectX 11", "C++", "ゲームデザイン", "Live2D"]
+      title: "システム開発",
+      skills: ["Unity", "C#", "DirectX 11", "C++", "JavaScript", "React", "TypeScript", "LINE API", "SQL", "Python"]
     },
     {
-      title: "Web開発",
-      skills: ["JavaScript", "LINE API", "React", "TypeScript", "Node.js", "HTML/CSS"]
+      title: "ツール",
+      skills: ["Git", "GitHub", "Trello", "Slack", "Looker Studio", "Photoshop", "Aviutl", "Spreadsheets"]
     },
     {
-      title: "ツール & スキル",
-      skills: ["AI活用", "Git", "Trello", "Slack", "プロジェクト管理", "チームマネジメント"]
+      title: "スキル",
+      skills: ["AI活用開発", "プロジェクト管理", "チームマネジメント", "ゲームデザイン", "Live2D", "データ分析", "UI/UX設計"]
     }
   ];
 
@@ -40,16 +40,15 @@ export function ProfilePage() {
           <h1 className="text-4xl font-medium mb-6">プロフィール</h1>
           <div className="space-y-4 text-muted-foreground">
             <p>
-              こんにちは！岡悟史です。26歳のゲームプログラマー・クリエイターとして、
-              「思い立ったら、すぐ形に」をモットーに企画から開発まで一貫して手がけています。
+              こんにちは、岡悟史です。26歳のシステムエンジニアとして、現在AI駆動開発の領域に専門的に取り組んでいます。
             </p>
             <p>
-              株式会社レベルファイブでのゲーム開発経験を活かし、現在は独立してLINE占いコンテンツ、
-              Vtuberプロジェクト、キャラクタービジネスなど多分野でのプロジェクトを推進しています。
+              従来はバックエンド開発を中心としたキャリアを歩んでいましたが、UI/UXデザインやフロントエンド技術への関心から技術領域の拡張を模索していました。
+              AI技術の急速な発展により、これまでのスキルセットを核として活用しながら、包括的な開発が可能となり、現在大きな技術的成長を実感しています。
             </p>
             <p>
-              企画力・開発力・統率力をバランスよく備え、チームを率いて数々の受賞作品を生み出してきました。
-              AI技術の活用にも積極的で、常に新しい技術に挑戦し続けています。
+              ネットワークアーキテクチャとデータベース設計の基盤知識強化のため、応用情報技術者試験の取得を目指しており、
+              将来的にはフルスタックエンジニアとして開発をリードしたいと考えています。
             </p>
           </div>
           
@@ -57,19 +56,24 @@ export function ProfilePage() {
             <h3 className="text-xl font-medium mb-4">経歴</h3>
             <div className="space-y-4">
               <div className="border-l-2 border-primary pl-4">
+                <h4 className="font-medium">システムエンジニア</h4>
+                <p className="text-muted-foreground text-sm">サングローブ株式会社 • 2025年2月 - 現在</p>
+                <p className="text-sm mt-2">営業支援企業にて、業務データの解析・設計・実装を一貫して担当。SQL/GAS/Pythonを活用した機能開発と連携処理、ダッシュボード構築による営業データ分析を実施。</p>
+              </div>
+              <div className="border-l-2 border-muted pl-4">
                 <h4 className="font-medium">プログラマー</h4>
                 <p className="text-muted-foreground text-sm">株式会社レベルファイブ • 2022年4月 - 2024年8月</p>
                 <p className="text-sm mt-2">イナズマイレブン 英雄たちのヴィクトリーロードの開発。日本ゲーム大賞2023フューチャー賞受賞作品。</p>
               </div>
               <div className="border-l-2 border-muted pl-4">
-                <h4 className="font-medium">独立・個人開発</h4>
-                <p className="text-muted-foreground text-sm">2024年9月 - 現在</p>
-                <p className="text-sm mt-2">LINE占いコンテンツ、Vtuberプロジェクト、モアイキャラクタービジネスなど多分野でのプロジェクトを推進。</p>
+                <h4 className="font-medium">個人開発</h4>
+                <p className="text-muted-foreground text-sm">2024年9月 - 2025年1月</p>
+                <p className="text-sm mt-2">LINE占いコンテンツ、Vtuber制作、キャラクタービジネス、プログラミングコンテストなど多分野での勉強と創作に取り組む。</p>
               </div>
               <div className="border-l-2 border-muted pl-4">
                 <h4 className="font-medium">神戸電子専門学校</h4>
                 <p className="text-muted-foreground text-sm">エンターテインメントソフト学科 • 2018年 - 2022年</p>
-                <p className="text-sm mt-2">チーム制作でリーダーを務め、アイディア賞など複数の受賞実績。Unity開発の基礎を習得。</p>
+                <p className="text-sm mt-2">チームでのシステム/ゲーム開発を行い、アイディア賞など複数の受賞実績。</p>
               </div>
               <div className="border-l-2 border-muted pl-4">
                 <h4 className="font-medium">演劇部 部長</h4>
