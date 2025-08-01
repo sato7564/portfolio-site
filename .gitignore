@@ -29,3 +29,8 @@ debug/
 # MCP Obsidian
 mcp-obsidian/
 .env
+ObsidianVault/
+履歴書*.txt
+過去.txt
+*.png
+*.jpg
