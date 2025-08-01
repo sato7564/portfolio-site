@@ -33,5 +33,8 @@ scp -P $Port dist\.htaccess ${User}@${Host_Server}:${RemoteDir}
 Write-Host "  - Uploading assets folder..." -ForegroundColor White
 scp -P $Port -r dist\assets ${User}@${Host_Server}:${RemoteDir}
 
+Write-Host "  - Uploading images folder..." -ForegroundColor White
+scp -P $Port -r dist\images ${User}@${Host_Server}:${RemoteDir}
+
 Write-Host "✅ Deployment completed!" -ForegroundColor Green
 Write-Host "🌐 Check your site at: https://witty-naha-8507.greater.jp/" -ForegroundColor Cyan

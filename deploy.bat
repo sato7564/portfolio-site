@@ -26,6 +26,9 @@ scp -P 2222 dist\.htaccess greater.jp-witty-naha-8507@ssh.lolipop.jp:~/web/
 echo   - Uploading assets folder...
 scp -P 2222 -r dist\assets greater.jp-witty-naha-8507@ssh.lolipop.jp:~/web/
 
+echo   - Uploading images folder...
+scp -P 2222 -r dist\images greater.jp-witty-naha-8507@ssh.lolipop.jp:~/web/
+
 echo ✅ Deployment completed!
 echo 🌐 Check your site at: https://greater.jp/
 pause
