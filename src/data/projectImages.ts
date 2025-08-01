@@ -56,13 +56,7 @@ export const projectImages: {
     video: {
       url: "https://www.youtube.com/watch?v=wd9o9eifRZk",
       thumbnail: "https://img.youtube.com/vi/wd9o9eifRZk/hqdefault.jpg"
-    },
-    videos: [
-      {
-        url: "https://www.youtube.com/watch?v=wd9o9eifRZk",
-        thumbnail: "https://img.youtube.com/vi/wd9o9eifRZk/hqdefault.jpg"
-      }
-    ]
+    }
   },
   "Claim": {
     thumbnail: "/images/projects/claim/Claim_サムネ.jpg",
