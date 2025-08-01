@@ -1,6 +1,6 @@
 import { Button } from "./ui/button";
 import { Badge } from "./ui/badge";
-import { Github, Linkedin, Mail, ArrowRight, Code, Palette, Lightbulb } from "lucide-react";
+import { Github, ArrowRight, Code, Palette, Lightbulb } from "lucide-react";
 import ScrollFloat from "./ScrollFloatSimple";
 
 interface HomePageProps {
@@ -25,12 +25,18 @@ export function HomePage({ onPageChange }: HomePageProps) {
           </Badge>
           
           <h1 className="text-5xl md:text-7xl font-medium mb-6 bg-gradient-to-r from-primary via-primary to-secondary bg-clip-text text-transparent leading-tight">
-            ゲーム<br />プログラマー
+            OKA SATOSHI<br />Innovation Lab
           </h1>
           
           <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto leading-relaxed">
-            「思い立ったら、すぐ形に」をモットーに、ゲーム開発からビジネスアプリケーションまで幅広く手がけています。
-            企画力・開発力・統率力をバランスよく活かして、ユーザーに喜ばれる体験を創造します。
+            「思い立ったら、すぐ形に」をモットーに、<br />
+            ゲーム開発からビジネスアプリケーションまで幅広く手がけています。<br />
+            <br />
+            AI駆動開発を積極的に活用し、常に最新の技術情報を収集することで、<br />
+            効率的で高品質な開発を目指しています。<br />
+            <br />
+            企画力・開発力・統率力をバランスよく活かして、<br />
+            ユーザーに喜ばれる体験を創造します！
           </p>
           
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
@@ -56,27 +62,16 @@ export function HomePage({ onPageChange }: HomePageProps) {
           
           <div className="flex items-center justify-center gap-6">
             <a
-              href="https://github.com"
+              href="https://github.com/sato7564/portfolio-site"
               target="_blank"
               rel="noopener noreferrer"
-              className="p-3 rounded-full glass-effect hover:bg-secondary/30 transition-all duration-300 shadow-intellectual"
+              className="flex items-center gap-3 p-3 rounded-full glass-effect hover:bg-secondary/30 transition-all duration-300 shadow-intellectual group"
             >
               <Github className="w-6 h-6 text-primary" />
+              <span className="text-sm text-muted-foreground group-hover:text-primary transition-colors">
+                このサイトのソースコード
+              </span>
             </a>
-            <a
-              href="https://linkedin.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="p-3 rounded-full glass-effect hover:bg-secondary/30 transition-all duration-300 shadow-intellectual"
-            >
-              <Linkedin className="w-6 h-6 text-primary" />
-            </a>
-            <button
-              onClick={() => onPageChange('contact')}
-              className="p-3 rounded-full glass-effect hover:bg-secondary/30 transition-all duration-300 shadow-intellectual"
-            >
-              <Mail className="w-6 h-6 text-primary" />
-            </button>
           </div>
           
           {/* 技術要素の装飾 */}
