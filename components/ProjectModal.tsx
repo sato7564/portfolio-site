@@ -1,7 +1,7 @@
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "./ui/dialog";
 import { Button } from "./ui/button";
 import { Badge } from "./ui/badge";
-import { ExternalLink, Github, Calendar, Users } from "lucide-react";
+import { ExternalLink, Calendar, Users } from "lucide-react";
 import { MediaCarousel } from "./MediaCarousel";
 
 interface ProjectModalProps {

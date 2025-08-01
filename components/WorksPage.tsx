@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "./ui/card";
 import { Button } from "./ui/button";
 import { Badge } from "./ui/badge";
-import { ExternalLink, Github, Calendar, Users, Award } from "lucide-react";
+import { ExternalLink, Calendar, Users, Award } from "lucide-react";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
 import { ProjectModal } from "./ProjectModal";
 import RollingGallery from "./RollingGallery";
@@ -84,14 +84,14 @@ export function WorksPage() {
     },
     {
       title: "スタッフ稼働量の分析ダッシュボード",
-      description: "データ分析システム。SQL、Python、Google Cloudを活用し、データ収集から可視化まで一気通貫で設計・実装。売上データ分析とビジネス改善提案",
-      longDescription: "システムエンジニアとして担当している、企業の販売データを分析・可視化するダッシュボードシステムです。BigQueryを活用したデータパイプライン構築、Python による自動化処理、Looker Studio でのダッシュボード設計まで、エンドツーエンドでシステム全体を担当。「マニュアル不要」を目指した直感的なUI設計により、非エンジニアでも簡単に使える仕組みを実現しています。\n\n実際のダッシュボード：https://lookerstudio.google.com/u/0/reporting/b4252b31-16b1-4792-aeb1-6f08188da62f/page/p_o0botmnsud",
+      description: "データ分析システム。SQL、Pythonを活用し、データ収集から可視化まで一気通貫で設計・実装。売上データ分析とビジネス改善提案",
+      longDescription: "システムエンジニアとして担当している、企業のスタッフのデータの分析・可視化するダッシュボードシステムです。Python による自動化処理、Looker Studio でのダッシュボード設計まで担当。「マニュアル不要」を目指した直感的なUI設計により、非エンジニアでも簡単に使える仕組みを実現しています。\n\n実際のダッシュボード：https://lookerstudio.google.com/u/0/reporting/b4252b31-16b1-4792-aeb1-6f08188da62f/page/p_o0botmnsud",
       image: getProjectImage("業務解析ダッシュボード開発"),
       images: getProjectScreenshots("業務解析ダッシュボード開発"),
-      tags: ["SQL", "Python", "Google Cloud", "Looker Studio", "BigQuery", "データ分析", "業務自動化"],
+      tags: ["SQL", "Python", "Google Cloud", "Looker Studio","データ分析", "業務自動化"],
       category: "ビジネスシステム開発",
       year: "2025年2月〜現在",
-      team: "1人（単独担当）",
+      team: "1人",
       featured: true,
       liveUrl: "https://lookerstudio.google.com/u/0/reporting/b4252b31-16b1-4792-aeb1-6f08188da62f/page/p_o0botmnsud",
       status: "進行中",
@@ -101,11 +101,9 @@ export function WorksPage() {
         "SQL最適化による高速データ処理",
         "Python による業務プロセス自動化",
         "直感的で「マニュアル不要」なダッシュボード設計",
-        "Google Cloud Platform を活用したスケーラブルな構成",
         "リアルタイムデータ更新とアラート機能",
-        "売上トレンド分析と業績予測機能"
       ],
-      techDetails: "BigQuery のパーティション機能とクラスタリングを駆使した高速クエリ、Cloud Functions による自動データ更新、Looker Studio での高度な可視化を実現。単独でプロジェクト全体を担当し、要求定義から運用まで一貫して責任を持って取り組んでいます。"
+      techDetails: "Cloud Functions による自動データ更新、Looker Studio での高度な可視化を実現。単独でプロジェクト全体を担当し、要求定義から運用まで一貫して責任を持って取り組んでいます。"
     },
     {
       title: "裏斬リッシュ（うらぎりっしゅ）",
@@ -113,7 +111,7 @@ export function WorksPage() {
       longDescription: "専門学校卒業制作として開発した、オンライン対戦型の人狼系アクションゲームです。「Among Us」の人狼ゲーム要素に、日本の戦隊もの・仮面ライダーの特撮要素を融合した独創的な作品。リアルタイムバトルと推理要素を組み合わせ、コミカルなダンスシーンや決めポーズなど、日本文化ならではの演出を盛り込みました。8人という最大規模のチームを5ヶ月間統率し、全員で完成まで走り抜けた集大成プロジェクトです。",
       image: getProjectImage("裏斬リッシュ（うらぎりっしゅ）"),
       images: getProjectScreenshots("裏斬リッシュ（うらぎりっしゅ）"),
-      tags: ["Unity", "C#", "オンラインマルチプレイ", "8人チーム統率", "卒業制作", "特撮要素"],
+      tags: ["Unity", "C#", "オンラインマルチプレイ", "8人チーム統率", "卒業制作"],
       category: "ゲーム開発",
       year: "専門学校卒業制作（2022年）",
       team: "8人",
@@ -129,22 +127,20 @@ export function WorksPage() {
         "8人規模チームの統率と長期プロジェクト管理",
         "リアルタイム通信・同期処理の最適化"
       ],
-      techDetails: "Unity のネットワーク機能を駆使してオンラインマルチプレイを実装。リアルタイム同期と低遅延通信を実現し、4人が同時にプレイできる安定したゲーム環境を構築。専門学校で培った全ての技術と経験を注ぎ込んだ、技術的にも内容的にも最も充実した作品です。"
+      techDetails: "Unity のネットワーク機能を駆使してオンラインマルチプレイを実装。リアルタイム同期を実現し、4人が同時にプレイできる安定したゲーム環境を構築。専門学校で培った全ての技術と経験を注ぎ込んだ、技術的にも内容的にも最も充実した作品です。"
     },
     {
       title: "LINE占いコンテンツ開発",
-      description: "JavaScriptとLINE APIを活用した占いコンテンツの受託開発。AI支援により未経験技術を2ヶ月で習得し、サブスクリプション決済機能付きで商用レベル品質を実現。",
-      longDescription: "外部企業からの依頼で開発した、LINE公式アカウント上で動作する占いコンテンツシステムです。JavaScript・LINE API共に未経験の技術領域でしたが、ChatGPTを戦略的に活用した効率的な学習・開発手法により、約2ヶ月という短期間で商用レベルのシステムを完成。おみくじ・タロット占いの機能実装に加え、非エンジニアでも占い内容を更新できるデータエディタの開発、サブスクリプション決済システムの統合まで行い、運用・保守性を重視した包括的なソリューションを提供しました。",
+      description: "JavaScriptとLINE APIを活用した占いコンテンツの受託開発。AI支援により未経験技術を2ヶ月で習得し、サブスクリプション決済機能付きで商用レベルを実現。",
+      longDescription: "LINE公式アカウント上で動作する占いコンテンツシステムです。JavaScript・LINE API共に未経験の技術領域でしたが、ChatGPTを戦略的に活用した効率的な学習・開発手法により、約2ヶ月という短期間で商用レベルのシステムを完成。おみくじ・タロット占いの機能実装に加え、非エンジニアでも占い内容を更新できるデータエディタの開発、サブスクリプション決済システムの統合まで行い、運用・保守性を重視した包括的なソリューションを提供しました。",
       image: getProjectImage("LINE占いコンテンツ開発"),
       images: getProjectScreenshots("LINE占いコンテンツ開発"),
-      tags: ["JavaScript", "LINE API", "AI活用開発", "受託開発", "決済システム", "データエディタ"],
+      tags: ["JavaScript", "LINE API", "AI活用開発", "決済システム", "データエディタ"],
       category: "ビジネス開発",
       year: "2024年9-10月",
       team: "2人（開発担当）",
       duration: "2ヶ月",
       featured: false,
-      type: "受託開発",
-      client: "外部企業",
       features: [
         "LINE Messaging APIを活用した占いシステム構築",
         "おみくじ・タロット占い機能の実装",
@@ -157,24 +153,21 @@ export function WorksPage() {
       techDetails: "未経験のJavaScript・LINE API開発において、AI支援による学習加速と実装効率化を実現。従来の学習方法にChatGPTを統合することで、短期間での技術習得と高品質なシステム構築を両立させました。社会人経験で培った問題解決能力を活かし、要件定義から納品まで一貫して担当しました。"
     },
     {
-      title: "多得ルワー子（Vtuber）",
+      title: "Vtuberプロジェクト",
       description: "最新AI技術を統合したVtuberプロジェクト。AI画像生成、Live2D、AI音声変換、フェイストラッキングを組み合わせ、個人で高品質なVtuberを制作・運営中。",
-      longDescription: "2024年10月から開始した最新技術を活用したVtuberプロジェクトです。AI画像生成によるキャラクターデザイン、Live2Dモデリング・アニメーション、AI音声変換技術、フェイストラッキングによるリアルタイム配信技術を統合し、個人レベルで高品質なVtuberの制作・運営を実現。複数の最新技術を組み合わせることで、従来は大規模チームでしか不可能だった品質のエンターテインメントコンテンツ制作に挑戦しています。",
-      image: getProjectImage("多得ルワー子（Vtuber）"),
-      images: getProjectScreenshots("多得ルワー子（Vtuber）"),
-      tags: ["AI画像生成", "Live2D", "AI音声変換", "フェイストラッキング", "最新技術統合", "配信技術"],
+      longDescription: "2024年10月から開始した最新技術を活用したVtuberプロジェクトです。AI画像生成によるキャラクターデザイン、Live2Dモデリング・アニメーション、AI音声変換技術、フェイストラッキングによるリアルタイム配信技術を統合し、個人レベルで高品質なVtuberの制作・運営を実現。複数の最新技術を組み合わせることで、エンターテインメントコンテンツ制作に挑戦しています。",
+      image: getProjectImage("Vtuberプロジェクト"),
+      images: getProjectScreenshots("Vtuberプロジェクト"),
+      tags: ["AI画像生成", "Live2D", "AI音声変換", "フェイストラッキング", "最新技術統合"],
       category: "エンターテインメント",
       year: "2024年10月〜現在",
-      team: "1人（個人制作）",
+      team: "1人",
       featured: false,
-      status: "継続運営中",
       features: [
         "AI画像生成（Stable Diffusion）によるキャラクターデザイン",
         "Live2Dモデリング・リアルタイムアニメーション",
         "AI音声変換技術によるキャラクターボイス生成",
         "フェイストラッキングによる自然な表情・動作",
-        "複数AI技術の統合による高品質コンテンツ制作",
-        "リアルタイム配信技術の習得・運用",
         "個人レベルでの包括的エンターテインメント制作"
       ],
       techDetails: "社会人経験で培った問題解決能力を活かし、複数の最新技術を統合したシステムを独学で構築。トライ&エラーを繰り返すことで技術的課題を克服し、従来の制作手法では不可能だった効率的で高品質なVtuber制作ワークフローを確立しました。"
