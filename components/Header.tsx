@@ -12,8 +12,7 @@ export function Header({ currentPage, onPageChange }: HeaderProps) {
 
   const navItems = [
     { id: 'profile', english: 'Profile', japanese: 'プロフィール' },
-    { id: 'works', english: 'Works', japanese: '作品一覧' },
-    { id: 'about', english: 'About', japanese: 'アバウト' }
+    { id: 'works', english: 'Works', japanese: '作品一覧' }
   ];
 
   return (
